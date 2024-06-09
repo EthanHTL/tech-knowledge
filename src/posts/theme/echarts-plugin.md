@@ -20,6 +20,7 @@ head:
       content: ECharts 图表
 title: echarts-plugin
 author: H T L
+permalink: /posts/theme/wew6pl92/
 ---
 
 # ECharts 插件

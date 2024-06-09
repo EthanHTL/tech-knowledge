@@ -1,0 +1,12 @@
+import { Logger } from '@vuepress/helper';
+export declare const THEME_NAME = "vuepress-theme-htl";
+export declare const resolve: (...args: string[]) => string;
+export declare const templates: (url: string) => string;
+export declare const nanoid: (size?: number | undefined) => string;
+export declare const logger: Logger;
+export declare function getPackage(): any;
+export declare function getThemePackage(): any;
+export declare function normalizePath(path: string): string;
+export declare function pathJoin(...args: string[]): string;
+export declare function getCurrentDirname(basePath: string | undefined, filepath: string): string;
+export declare function withBase(path?: string, base?: string): string;

@@ -1,5 +1,4 @@
 import { defineUserConfig } from 'vuepress'
-import { viteBundler } from '@vuepress/bundler-vite'
 import theme from './theme.js'
 import plugins from './plugins/index.js'
 

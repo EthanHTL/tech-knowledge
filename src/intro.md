@@ -5,6 +5,7 @@ author: H T L
 createTime: 2024/06/07 22:36:35
 title: intro
 date: 2024-06-08
+permalink: /intro/
 ---
 
 # 介绍页

@@ -7,6 +7,7 @@ tag:
 title: encrypt
 author: H T L
 date: 2024-06-08
+permalink: /en/demo/y7zj7evp/
 ---
 
 # Encryption Article

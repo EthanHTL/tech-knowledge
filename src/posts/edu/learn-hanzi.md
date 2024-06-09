@@ -14,6 +14,7 @@ head:
       content: 汉字学习
 title: learn-hanzi
 author: H T L
+permalink: /posts/edu/fpwg7fdp/
 ---
 
 # 学习汉字

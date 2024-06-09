@@ -9,6 +9,7 @@ tag:
   - Emoji
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/markdown/emoji/zytn0x84/
 ---
 
 - :smile: `:smile:`

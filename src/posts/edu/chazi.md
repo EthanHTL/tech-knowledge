@@ -16,6 +16,7 @@ head:
       content: 汉字学习，查看笔画，笔划，笔顺
 title: chazi
 author: H T L
+permalink: /posts/edu/5add0abt/
 ---
 
 # 查字

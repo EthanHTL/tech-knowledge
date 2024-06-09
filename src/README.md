@@ -44,5 +44,6 @@ footer: 自定义你的页脚文字
 author: H T L
 createTime: 2024/06/07 21:25:51
 date: 2024-06-08
+permalink: /
 ---
 

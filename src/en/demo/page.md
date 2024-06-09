@@ -13,6 +13,7 @@ sticky: true
 star: true
 footer: Footer content for test
 copyright: No Copyright
+permalink: /en/demo/50kg0fxi/
 ---
 
 Content before `more` comment is regarded as page excerpt.

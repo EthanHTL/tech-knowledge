@@ -15,6 +15,7 @@ head:
       content: 客厅电视尺寸推荐
 title: tv
 author: H T L
+permalink: /posts/home/z44oujae/
 ---
 
 # 客厅电视尺寸推荐

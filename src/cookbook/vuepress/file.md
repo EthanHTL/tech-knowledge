@@ -10,6 +10,7 @@ tag:
   - VuePress
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/vuepress/5gpu9h1h/
 ---
 
 ## 文件结构

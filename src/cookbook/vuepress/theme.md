@@ -10,6 +10,7 @@ tag:
   - VuePress
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/vuepress/vg5mt47r/
 ---
 
 VuePress 主题为你提供了布局、样式和其他功能，帮助你专注于 Markdown 内容的写作。

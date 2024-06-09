@@ -15,6 +15,7 @@ head:
       content: VuePress 文章排序问题
 title: vuepress-articels-sort
 author: H T L
+permalink: /posts/devops/edjpe4n5/
 ---
 
 # VuePress 文章排序问题

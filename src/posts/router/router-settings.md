@@ -16,6 +16,7 @@ head:
       content: newifi3 路由器折腾笔记
 title: router-settings
 author: H T L
+permalink: /posts/router/q1ml7njm/
 ---
 
 # 路由器折腾笔记

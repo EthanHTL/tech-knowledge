@@ -16,6 +16,7 @@ head:
       content: 自定义主题
 title: customize-theme
 author: H T L
+permalink: /posts/theme/zbj8bbor/
 ---
 
 # 自定义主题

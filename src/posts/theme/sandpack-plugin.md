@@ -20,6 +20,7 @@ head:
       content: Sandpack Playground
 title: sandpack-plugin
 author: H T L
+permalink: /posts/theme/zfw117nr/
 ---
 
 # Sandpack 插件

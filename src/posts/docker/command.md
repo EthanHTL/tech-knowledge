@@ -14,6 +14,7 @@ head:
       content: Docker 常用命令
 title: command
 author: H T L
+permalink: /posts/docker/mu6wv8xs/
 ---
 
 # Docker 常用命令

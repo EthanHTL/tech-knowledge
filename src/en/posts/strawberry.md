@@ -9,6 +9,7 @@ tag:
   - small
 title: strawberry
 author: H T L
+permalink: /en/posts/aijzip9z/
 ---
 
 # Strawberry

@@ -41,6 +41,7 @@ projects:
 footer: customize your footer text
 author: H T L
 date: 2024-06-08
+permalink: /en/
 ---
 
 This is a blog home page demo.

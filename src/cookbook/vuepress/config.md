@@ -10,6 +10,7 @@ tag:
   - VuePress
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/vuepress/wxvaponr/
 ---
 
 ## 配置文件

@@ -9,6 +9,7 @@ tag:
   - round
 title: cherry
 author: H T L
+permalink: /en/posts/nsmklzbp/
 ---
 
 # Cherry

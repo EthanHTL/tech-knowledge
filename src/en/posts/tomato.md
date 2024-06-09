@@ -11,6 +11,7 @@ star: true
 sticky: true
 title: tomato
 author: H T L
+permalink: /en/posts/2h3gyflv/
 ---
 
 # Tomato

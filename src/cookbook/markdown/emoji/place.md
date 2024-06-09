@@ -9,6 +9,7 @@ tag:
   - Emoji
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/markdown/emoji/pa3qgnka/
 ---
 
 - :house: `:house:`

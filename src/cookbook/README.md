@@ -5,6 +5,7 @@ article: false
 index: false
 author: H T L L
 date: 2024-06-09
+permalink: /cookbook/
 ---
 
 <!-- 用于限制高度 -->

@@ -4,6 +4,11 @@ export const zhNavbar = navbar([
   '/',
   '/cookbook/',
   {
+    text: "mysql",
+    icon: "pen-to-square",
+    link: "/mysql/",
+  },
+  {
     text: '分类',
     icon: 'pen-to-square',
     link: '/article/',

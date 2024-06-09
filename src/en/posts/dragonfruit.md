@@ -9,6 +9,7 @@ tag:
   - big
 title: dragonfruit
 author: H T L
+permalink: /en/posts/ibj8unaa/
 ---
 
 # Dragon Fruit

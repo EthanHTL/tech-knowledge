@@ -17,6 +17,7 @@ head:
       content: 一年级语文下册 识字
 author: H T L
 title: 一年级语文下册
+permalink: /posts/edu/bazgoq4k/
 ---
 
 # 一年级语文下册

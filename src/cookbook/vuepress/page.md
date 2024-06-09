@@ -10,6 +10,7 @@ tag:
   - VuePress
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/vuepress/elg655nj/
 ---
 
 VuePress 是以 Markdown 为中心的。你项目中的每一个 Markdown 文件都是一个单独的页面。

@@ -15,6 +15,7 @@ head:
       content: 更新openmediavault
 title: upgrade-omv
 author: H T L
+permalink: /posts/n1/rxjcksb2/
 ---
 
 # 更新 OpenMediaVault

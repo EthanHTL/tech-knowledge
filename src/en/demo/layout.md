@@ -8,6 +8,7 @@ tag:
   - Layout
 author: H T L
 date: 2024-06-08
+permalink: /en/demo/gugmq2bl/
 ---
 
 The layout contains:

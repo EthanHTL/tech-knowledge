@@ -12,6 +12,7 @@ head:
       content: 分栏布局示例
 title: columns-layout-demo
 author: H T L
+permalink: /posts/other/6k9r1ydp/
 ---
 
 # 台湾问题与新时代中国统一事业

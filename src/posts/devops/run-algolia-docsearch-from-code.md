@@ -14,6 +14,7 @@ head:
       content: 运行自己的algolia
 title: run-algolia-docsearch-from-code
 author: H T L
+permalink: /posts/devops/f11lqequ/
 ---
 
 # 运行自己的 algolia

@@ -5,23 +5,26 @@ import type { ThemeOptions } from 'vuepress-theme-hope'
 
 const __dirname = getDirname(import.meta.url)
 
-export default (options: ThemeOptions) => ({
-  name: 'vuepress-theme-htl',
+export default (options: ThemeOptions) => {
+  return (app) => {
+    return {
+      name: 'vuepress-theme-htl',
 
-  extends: hopeTheme(options, { custom: true }),
-  
+      extends: hopeTheme(options, { custom: true }),
 
-  alias: {
-    // You can override or add aliases here
-    '@theme-hope/components/NormalPage': path.resolve(
-      __dirname,
-      './components/NormalPage.vue'
-    ),
+      alias: {
+        // You can override or add aliases here
+        '@theme-hope/components/NormalPage': path.resolve(
+          __dirname,
+          './components/NormalPage.vue'
+        ),
 
-    // 必应壁纸
-    // '@theme-hope/modules/blog/components/BlogHero': path.resolve(
-    //   __dirname,
-    //   './components/BlogHero.vue'
-    // ),
-  },
-})
+        // 必应壁纸
+        // '@theme-hope/modules/blog/components/BlogHero': path.resolve(
+        //   __dirname,
+        //   './components/BlogHero.vue'
+        // ),
+      },
+    }
+  }
+}

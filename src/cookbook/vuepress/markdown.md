@@ -10,6 +10,7 @@ tag:
   - VuePress
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/vuepress/h5v3ih1z/
 ---
 
 ## 语法扩展

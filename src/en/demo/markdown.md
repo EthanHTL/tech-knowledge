@@ -8,6 +8,7 @@ tag:
   - Markdown
 author: H T L
 date: 2024-06-08
+permalink: /en/demo/h5cjxznm/
 ---
 
 VuePress basically generate pages from Markdown files. So you can use it to generate documentation or blog sites easily.

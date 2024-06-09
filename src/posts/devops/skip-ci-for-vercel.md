@@ -14,6 +14,7 @@ head:
       content: Vercel 中跳过发布
 title: skip-ci-for-vercel
 author: H T L
+permalink: /posts/devops/0570puu9/
 ---
 
 # 取消 Vercel 发布

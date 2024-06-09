@@ -15,6 +15,7 @@ head:
       content: 分栏布局，杂志布局
 title: column-layout
 author: H T L
+permalink: /posts/theme/fo8gbfue/
 ---
 
 # 文章分栏布局

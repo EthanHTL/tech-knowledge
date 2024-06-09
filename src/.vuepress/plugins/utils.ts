@@ -3,7 +3,7 @@ import { customAlphabet } from 'nanoid'
 import { fs, getDirname, path } from 'vuepress/utils'
 import { Logger, ensureEndingSlash, ensureLeadingSlash } from '@vuepress/helper'
 
-export const THEME_NAME = 'vuepress-theme-plume'
+export const THEME_NAME = 'vuepress-theme-htl'
 
 const __dirname = getDirname(import.meta.url)
 

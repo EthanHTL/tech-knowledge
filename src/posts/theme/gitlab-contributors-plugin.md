@@ -17,6 +17,7 @@ head:
       content: gitlab contributors
 title: gitlab-contributors-plugin
 author: H T L
+permalink: /posts/theme/tglw6o61/
 ---
 
 # Gitlab 贡献者插件

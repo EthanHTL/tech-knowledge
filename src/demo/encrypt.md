@@ -8,6 +8,7 @@ author: H T L
 title: encrypt
 createTime: 2024/06/07 22:37:12
 date: 2024-06-08
+permalink: /demo/jixuu01t/
 ---
 
 # 密码加密的文章rrrrrrrrrrrrrrrrr

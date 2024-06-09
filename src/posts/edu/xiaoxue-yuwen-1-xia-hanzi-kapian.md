@@ -20,6 +20,7 @@ head:
       content: 一年级语文下册 识字卡片
 author: H T L
 title: xiaoxue-yuwen-1-xia-hanzi-kapian
+permalink: /posts/edu/xn06jije/
 ---
 
 # 一年级语文下册识字卡片 <Badge text="待补充" type="tip" />

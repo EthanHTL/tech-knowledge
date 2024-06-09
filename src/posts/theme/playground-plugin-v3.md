@@ -20,6 +20,7 @@ head:
       content: Vue SFC Playground
 title: playground-plugin-v3
 author: H T L
+permalink: /posts/theme/jlh5p5i0/
 ---
 
 # Playground 插件 v3

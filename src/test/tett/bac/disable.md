@@ -21,6 +21,7 @@ backtotop: false
 author: H T L
 createTime: 2024/06/07 22:37:12
 date: 2024-06-09
+permalink: /test/tett/bac/na25as12/
 ---
 
 你可以通过设置页面的 Frontmatter，在页面禁用功能与布局。

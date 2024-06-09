@@ -10,6 +10,7 @@ tag:
   - Markdown
 author: H T L
 date: 2024-06-09
+permalink: /cookbook/markdown/7w1601cn/
 ---
 
 <!-- markdownlint-disable -->

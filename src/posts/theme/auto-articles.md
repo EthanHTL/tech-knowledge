@@ -15,6 +15,7 @@ head:
       content: 自动显示当前路径下的文章列表
 title: auto-articles
 author: H T L
+permalink: /posts/theme/mw0ps2iw/
 ---
 
 # 自动显示当前路径下的文章列表

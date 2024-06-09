@@ -9,6 +9,7 @@ tag:
 author: H T L
 createTime: 2024/06/07 22:37:12
 date: 2024-06-09
+permalink: /test/ae2esz1n/
 ---
 
 VuePress 主要从 Markdown 文件生成页面。因此，你可以使用它轻松生成文档或博客站点。

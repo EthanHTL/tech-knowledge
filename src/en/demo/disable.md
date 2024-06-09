@@ -20,6 +20,7 @@ footer: false
 backtotop: false
 author: H T L
 date: 2024-06-08
+permalink: /en/demo/ytfrx0kv/
 ---
 
 You can disable some function and layout on the page by setting the Frontmatter of the page.
