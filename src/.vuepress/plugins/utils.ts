@@ -10,7 +10,7 @@ const __dirname = getDirname(import.meta.url)
 export const resolve = (...args: string[]) => path.resolve(__dirname, '../', ...args)
 export const templates = (url: string) => resolve('../templates', url)
 
-export const nanoid = customAlphabet('0123456789abcdefghijklmnopqrstuvwxyz', 8)
+export const getnanoid = customAlphabet('0123456789abcdefghijklmnopqrstuvwxyz', 8)
 
 export const logger = new Logger(THEME_NAME)
 

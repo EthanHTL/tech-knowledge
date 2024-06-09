@@ -7,7 +7,7 @@ import {
 import {
   getCurrentDirname,
   getPackage,
-  nanoid,
+  getnanoid,
   normalizePath,
   pathJoin,
   withBase,
@@ -62,7 +62,7 @@ export default autoFrontmatterPlugin({
           let prefix = path.dirname(relativePath)
           // let basename = path.basename(relativePath) // README.md
           // return null
-          return normalizePath(`/${prefix}/${nanoid()}/`)
+          return normalizePath(`/${prefix}/${getnanoid()}/`)
         },
       },
     },

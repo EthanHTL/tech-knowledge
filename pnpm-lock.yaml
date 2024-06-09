@@ -29,6 +29,9 @@ importers:
       date-fns:
         specifier: ^3.6.0
         version: 3.6.0
+      nanoid:
+        specifier: ^5.0.7
+        version: 5.0.7
       nodejs-jieba:
         specifier: ^0.1.2
         version: 0.1.2(encoding@0.1.13)
