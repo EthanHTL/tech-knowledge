@@ -4,7 +4,7 @@ import theme from './theme.js'
 import plugins from './plugins/index.js'
 
 export default defineUserConfig({
-  base: '/',
+  base: '/tech-knowledge/',
 
   locales: {
     '/': {

@@ -19,7 +19,7 @@ const themeOptions: ThemeOptions = {
 
   logo: '/logo.svg',
 
-  repo: 'https://github.com/EthanHTL',
+  repo: 'https://EthanHTL.github.io/tech-knowledge/',
 
   docsDir: 'src',
 
