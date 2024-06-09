@@ -50,38 +50,3 @@ jobs:
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  # 部署到服务器
-  deploy-server:
-    runs-on: ubuntu-latest
-    # 确保在部署到 GitHub Pages 之后执行
-    needs: deploy-gh-pages
-    steps:
-      # 检出网站代码
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          # 检出 gh-pages 分支
-          ref: gh-pages
-          # 获取全部的历史提交
-          fetch-depth: 0
-
-      # 配置环境
-      - name: Configuration environment
-        # 写入私钥、配置 Git 用户名，写入服务器地址
-        # 您需要自行将服务器的私钥写入 secrets 的 SSH_PRIVATE_KEY
-        run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan <your domain> >> ~/.ssh/known_hosts
-          git config --global user.name 'Your Name'
-          git config --global user.email 'You email'
-
-      # 部署到服务器
-      - name: Deploy
-        # 使用 Git 将网站代码强制推送到远程的网站目录
-        # 并使用 SSH 连接服务器进入网站目录手动切换到最新提交
-        run: |
-          git push -f git@<your domain>:<deploy dir> gh-pages
-          ssh git@<your domain> "cd <deploy dir> && git reset --hard HEAD"
