@@ -12,6 +12,7 @@ export default (options: ThemeOptions) => {
 
       extends: hopeTheme(options, { custom: true }),
 
+
       alias: {
         // You can override or add aliases here
         '@theme-hope/components/NormalPage': path.resolve(

@@ -20,6 +20,7 @@ export default defineUserConfig({
 
   theme,
 
+  // vuepress 插件配置
   plugins,
 
   pagePatterns: ["**/*.md", "!**/*.snippet.md", "!.vuepress", "!node_modules"],
