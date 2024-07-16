@@ -1,9 +1,11 @@
 import { defineUserConfig } from 'vuepress'
 import plugins from './plugins/index'
+import {bundlerOptions} from './plugins/bundlerOptions'
 import theme from './theme'
+import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  base: '/tech-knowledge/',
+  base: '/',
   port: 9090,
   // 站点多语言配置
   locales: {
@@ -34,6 +36,7 @@ export default defineUserConfig({
     },
   },
 
+  // bundler: viteBundler(bundlerOptions)
   // 和 PWA 一起启用
   // shouldPrefetch: false,get
 })
