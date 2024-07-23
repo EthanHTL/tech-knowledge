@@ -64,7 +64,7 @@ export const frontmatter: AutoFrontmatterOptions = {
           return basename
         },
         order(order: Array<string>, { relativePath }, data: any) {
-          console.log('order', order, data)
+          // console.log('order', order, data)
           if (order) return order
           return 1
         },
