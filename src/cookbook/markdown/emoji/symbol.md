@@ -10,6 +10,7 @@ tag:
 author: H T L
 date: 2024-06-09
 permalink: /cookbook/markdown/emoji/sgppdnni/
+order: 1
 ---
 
 - :one: `:one:`

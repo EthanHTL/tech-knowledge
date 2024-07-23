@@ -3,8 +3,18 @@ title: 基础
 date: 2024-07-02
 icon: fa-brands fa-java
 permalink: /java/core/lqefa56b/
+category: []
+tag: []
+author: H T L
+order: 1
 ---
 
+category:
+  - 教程
+  - Markdown
+tag:
+  - 示例
+  - Markdown
 
 ## 1.基本数据类型
 

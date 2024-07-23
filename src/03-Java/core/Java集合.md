@@ -3,6 +3,10 @@ title: 集合
 date: 2024-07-02
 icon: fa-brands fa-java
 permalink: /java/core/sg4qhdc2/
+category: []
+tag: []
+author: H T L
+order: 1
 ---
 
 ## 1. 集合框架

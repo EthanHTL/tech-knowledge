@@ -2,6 +2,10 @@
 title: Oh-My-Zsh 美化终端
 date: 2024-07-02
 permalink: /linux/oxhbxq3r/
+category: []
+tag: []
+author: H T L
+order: 1
 ---
 # Oh-My-Zsh 美化终端
 

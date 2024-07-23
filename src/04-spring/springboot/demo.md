@@ -2,6 +2,10 @@
 title: demo
 date: 2024-07-04
 permalink: /04-spring/springboot/nstzurq8/
+category: []
+tag: []
+author: H T L
+order: 1
 ---
 
 # Spring Demo
