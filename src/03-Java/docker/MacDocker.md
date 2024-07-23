@@ -13,19 +13,44 @@ author: H T L
 order: 1
 ---
 
+
+
+
+
 # Docker 镜像命令
 
 ### MYSQL
 
 ```shell
-$ docker run \
--p 3306:3306 \
---name mysql \
--v /Users/aurora/Docker/mount/db/node01/conf:/etc/mysql/conf.d \
--v /Users/aurora/Docker/mount/db/node01/logs:/logs \
--v /Users/aurora/Docker/mount/db/node01/data:/var/lib/mysql \
--e MYSQL_ROOT_PASSWORD=123456 \
--d mysql/mysql-server
+vim docker-compose-mysql-8.yaml
+
+version: '3'
+services:
+  mysql:
+    restart: always
+    privileged: true
+    image: mysql:8.0.39
+    container_name: mysql-8
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+    environment:
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: "12345678"
+      MYSQL_USER: "huang"
+      MYSQL_PASSWORD: "12345678"
+      MYSQL_INITDB_SKIP_TZINFO: "Asia/Shanghai"
+    ports:
+      - 3306:3306
+
+sudo docker compose -f ./docker-compose-mysql-8.yaml up
+
+docker exec -it mysql-8 /bin/sh
+
+# 连接数据库测试
+ mysql -uroot -p     # 密码 12345678
+  mysql -uhuang -p     # 密码 12345678
 ```
 
 
@@ -66,6 +91,8 @@ $ docker run  \
       -p 5672:5672  \
       -v ~/Docker/mount/rabbitmq/data/:/var/lib/rabbitmq/  \
       -v ~/Docker/mount/rabbitmq/log/:/var/log/rabbitmq/
+
+
 ```
 
 
@@ -74,46 +101,45 @@ $ docker run  \
 
 ### Nacos
 
-```bash
-docker pull nacos/nacos-server
+```sh
+vim standalone-mysql-8.yaml
 
-docker run -d \
--e MODE=standalone \
--e PREFER_HOST_MODE=hostname \
--e SPRING_DATASOURCE_PLATFORM=mysql \
--e MYSQL_SERVICE_HOST=数据库host \
--e MYSQL_SERVICE_PORT=数据库端口 \
--e MYSQL_SERVICE_USER=数据库用户名 \
--e MYSQL_SERVICE_PASSWORD=数据库密码 \
--e MYSQL_SERVICE_DB_NAME=数据库 \
--e MYSQL_SERVICE_DB_PARAM="autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=Asia/Shanghai" \
--p 8848:8848 \
---restart=always \
---name nacos \
--v ~/Docker/mount/nacos/standalone-logs/:/home/nacos/logs \
--v ~/Docker/mount/nacos/init.d/:/home/nacos/init.d \
--v ~/Docker/mount/nacos/conf/:/home/nacos/conf \
-nacos/nacos-server
+version: "3.8"
+services:
+  nacos:
+    image: nacos/nacos-server:latest
+    container_name: nacos
+    restart: always
+    environment:
+      - MODE=standalone
+      - MYSQL_SERVICE_HOST=localhost
+      - MYSQL_SERVICE_PORT=3306
+      - MYSQL_SERVICE_USER=huang
+      - MYSQL_SERVICE_PASSWORD=12345678
+      - MYSQL_SERVICE_DB_NAME=nacos_dev
+      - MYSQL_SERVICE_DB_PARAM="autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=Asia/Shanghai"
+    volumes:
+      - /usr/local/docker-server/nacos/conf/:/home/nacos/conf
+      - /usr/local/docker-server/nacos/logs/:/home/nacos/logs
+    ports:
+      - "8848:8848"
+      - "9848:9848"
 
+# 启动容器
+docker-compose -f ./standalone-mysql-8.yaml up
 
-```
+# 进入容器
+docker exec -it nacos /bin/sh
 
+# volumes导致找不到目录异常
+# 先取消volumes，启动容器，拷贝出来目录，再重新 docker-compose
+docker cp nacos:/home/nacos/conf /usr/local/docker-server/nacos/
+docker cp nacos:/home/nacos/logs /usr/local/docker-server/nacos/
 
+# 
 
-```
-docker run -d \
--e MODE=standalone \
--e PREFER_HOST_MODE=hostname \
--e SPRING_DATASOURCE_PLATFORM=mysql \
--e MYSQL_SERVICE_HOST=127.0.0.1 \
--e MYSQL_SERVICE_PORT=3306 \
--e MYSQL_SERVICE_USER=root \
--e MYSQL_SERVICE_PASSWORD=12345678 \
--e MYSQL_SERVICE_DB_NAME=nacosDB \
--e MYSQL_SERVICE_DB_PARAM="autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=Asia/Shanghai" \
--p 8848:8848 \
---name nacos \
-nacos/nacos-server
+# 属性配置
+https://nacos.io/zh-cn/docs/quick-start-docker.html
 ```
 
 
@@ -125,4 +151,3 @@ docker run --name sentinel \
 -p 8080:8080 \
 -d hashicorp/sentinel
 ```
-
