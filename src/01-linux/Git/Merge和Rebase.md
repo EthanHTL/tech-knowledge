@@ -16,13 +16,34 @@ permalink: /01-linux/Git/g4nwjm1i/
 参考：https://git-scm.com/docs/git-merge
 
 > 效果：会保留 merge 记录
+```sh
+	  A---B---C topic
+	 /
+    D---E---F---G master
+          
+          ||
 
+	  A---B---C topic
+	 /         \
+    D---E---F---G---H master    
+```
 
 ## Rebase 
 
 参考：https://git-scm.com/docs/git-rebase
 
 > 效果：会保持一条直线的提交记录，但是会隐藏merge记录
+```sh
+          A---B---C topic
+         /
+    D---E---F---G master
+
+          ||
+
+                  A'--B'--C' topic
+                 /
+    D---E---F---G master
+```
 
 
 ## Cherry Pick 功能
