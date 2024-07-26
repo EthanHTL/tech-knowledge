@@ -13,7 +13,7 @@ permalink: /01-linux/Git/g4nwjm1i/
 
 ## Merge
 
-参考：https://git-scm.com/docs/git-merge
+官网参考：https://git-scm.com/docs/git-merge
 
 > 效果：会保留 merge 记录
 ```sh
@@ -30,7 +30,9 @@ permalink: /01-linux/Git/g4nwjm1i/
 
 ## Rebase 
 
-参考：https://git-scm.com/docs/git-rebase
+官网参考：https://git-scm.com/docs/git-rebase
+
+Bilibili：https://www.bilibili.com/video/BV1Ur4y1q7xB/?spm_id_from=333.788&vd_source=b228bd46ba1fa2f17fbfc85871bb7759
 
 > 效果：会保持一条直线的提交记录，但是会隐藏merge记录
 ```sh
@@ -49,3 +51,4 @@ permalink: /01-linux/Git/g4nwjm1i/
 ## Cherry Pick 功能
 
 > 可以理解为将任何分支的某次提交拿过来，生成一次相同的提交
+

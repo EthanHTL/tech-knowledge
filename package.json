@@ -1,6 +1,6 @@
 {
   "name": "tech-knowledge",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A project of vuepress-theme-hope",
   "license": "MIT",
   "type": "module",
@@ -16,6 +16,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "@vuepress/helper": "2.0.0-rc.33",
     "@vuepress/plugin-catalog": "2.0.0-rc.34",
+    "@vuepress/plugin-comment": "^2.0.0-rc.34",
     "@vuepress/plugin-markdown-container": "2.0.0-rc.30",
     "@vuepress/plugin-prismjs": "2.0.0-rc.34",
     "@waline/client": "^3.3.0",

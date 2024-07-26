@@ -1,4 +1,4 @@
-name: Build app and deploy to aliyun
+name: Build app and deploy to linux
 on:
   #监听push操作
   push:

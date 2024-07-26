@@ -1,6 +1,6 @@
 ---
 title: Docker
 date: 2024-07-08
-permalink: /java/docker/oxqlk9y0/
+permalink: /docker/oxqlk9y0/
 author: H T L
 ---

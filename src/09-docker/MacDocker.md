@@ -41,6 +41,9 @@ services:
       MYSQL_USER: "huang"
       MYSQL_PASSWORD: "12345678"
       MYSQL_INITDB_SKIP_TZINFO: "Asia/Shanghai"
+    volumes:
+      - /srv/docker/mysql/data:/var/lib/mysql
+      - /srv/docker/mysql/conf/my.cnf:/etc/my.cnf
     ports:
       - 3306:3306
 
@@ -48,6 +51,12 @@ services:
 sudo docker compose -f ./docker-compose-mysql-8.yaml up -d
 
 docker exec -it mysql-8 /bin/sh
+
+docker cp mysql-8:/var/lib/mysql /srv/docker/mysql/data
+docker cp mysql-8:/etc/my.cnf /srv/docker/mysql/conf
+
+# 查看my.cnf配置位置的读取顺序
+mysql --help | grep my.cnf 
 
 # 连接数据库测试
  mysql -uroot -p     # 密码 12345678
@@ -223,24 +232,6 @@ save 60 10000
 
 
 
-### RabbitMq
-
-```bash
-$ docker pull rabbitmq:3.10.5-management
-
-$ docker run  \
-      -p 15672:15672   \ 
-      -p 5672:5672  \
-      -v ~/Docker/mount/rabbitmq/data/:/var/lib/rabbitmq/  \
-      -v ~/Docker/mount/rabbitmq/log/:/var/log/rabbitmq/
-
-
-```
-
-
-
-
-
 ### Nacos
 
 ```sh
@@ -256,13 +247,13 @@ services:
       - MODE=standalone
       - MYSQL_SERVICE_HOST=localhost
       - MYSQL_SERVICE_PORT=3306
-      - MYSQL_SERVICE_USER=huang
+      - MYSQL_SERVICE_USER=root
       - MYSQL_SERVICE_PASSWORD=12345678
       - MYSQL_SERVICE_DB_NAME=nacos_dev
       - MYSQL_SERVICE_DB_PARAM="autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=Asia/Shanghai"
     volumes:
-      - /usr/local/docker-server/nacos/conf/:/home/nacos/conf
-      - /usr/local/docker-server/nacos/logs/:/home/nacos/logs
+      - /usr/local/docker/nacos/conf/:/home/nacos/conf
+      - /usr/local/docker/nacos/logs/:/home/nacos/logs
     ports:
       - "8848:8848"
       - "9848:9848"
@@ -275,13 +266,55 @@ docker exec -it nacos /bin/sh
 
 # volumes导致找不到目录异常
 # 先取消volumes，启动容器，拷贝出来目录，再重新 docker-compose
-docker cp nacos:/home/nacos/conf /usr/local/docker-server/nacos/
-docker cp nacos:/home/nacos/logs /usr/local/docker-server/nacos/
+docker cp nacos:/home/nacos/conf /usr/local/docker/nacos/
+docker cp nacos:/home/nacos/logs /usr/local/docker/nacos/
 
-# 
 
 # 属性配置
 https://nacos.io/zh-cn/docs/quick-start-docker.html
+```
+
+
+
+
+
+### easyiamge
+
+> bilibili：https://www.bilibili.com/video/BV1vv4y1P7fd/?spm_id_from=333.788&vd_source=b228bd46ba1fa2f17fbfc85871bb7759
+>
+> Docker：https://hub.docker.com/r/ddsderek/easyimage
+>
+> 博客：https://blog.laoda.de/archives/docker-compose-install-easyimage#5-%E6%90%AD%E5%BB%BA%E6%96%B9%E5%BC%8F
+
+
+
+```bash
+vim docker-compose-easyiamge.yaml
+
+version: '3.3'
+services:
+  easyimage:
+    image: ddsderek/easyimage:latest
+    container_name: easyimage
+    ports:
+      - '8080:80'
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=1000
+      - PGID=1000
+      - DEBUG=false
+    volumes:
+      - '/root/data/docker_data/easyimage/config:/app/web/config'
+      - '/root/data/docker_data/easyimage/i:/app/web/i'
+    restart: unless-stopped
+    
+    
+# 给内存设置swap
+wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && clear && ./box.sh
+
+    
+ docker compose -f ./docker-compose-easyimage.yaml up
+
 ```
 
 
@@ -293,3 +326,23 @@ docker run --name sentinel \
 -p 8080:8080 \
 -d hashicorp/sentinel
 ```
+
+
+
+
+
+### RabbitMq
+
+```bash
+$ docker pull rabbitmq:3.10.5-management
+
+$ docker run  \
+      -p 15672:15672   \ 
+      -p 5672:5672  \
+      -v ~/Docker/mount/rabbitmq/data/:/var/lib/rabbitmq/  \
+      -v ~/Docker/mount/rabbitmq/log/:/var/log/rabbitmq/
+
+```
+
+
+

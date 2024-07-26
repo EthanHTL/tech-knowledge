@@ -54,6 +54,22 @@ sudo chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+
+
+```zsh
+# 方式二
+# step 1 将代码clone到本地 
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+# step 2 
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+# step 3 
+chsh -s $(which zsh)
+# step 4 
+# 退出终端，重新打开即可
+```
+
+
+
 ## 配置主题
 
 ### 配置
