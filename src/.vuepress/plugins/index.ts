@@ -15,7 +15,6 @@ import { commentPlugin } from '@vuepress/plugin-comment' // 评论
 
 // 导出
 export * from './autoFrontmatterPlugin'
-export * from './waline'
 export * from './searchProPlugin'
 export * from './catalog'
 export * from './mdEnhance'

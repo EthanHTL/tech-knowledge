@@ -12,6 +12,7 @@ export const locales: LocaleConfig = {
 
     displayFooter: true,
 
+    
     blog: {
       description: '一个IT社畜的技术分享',
       intro: '/intro',
@@ -35,6 +36,7 @@ export const locales: LocaleConfig = {
 
     // page meta
     metaLocales: {
+      toc: '此页目录',
       editLink: '在 GitHub !!! 上编辑此页',
     },
   },

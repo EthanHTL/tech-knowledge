@@ -11,10 +11,8 @@ tag:
   - VuePress
 author: H T L
 order: 1
+toc: true
 ---
-
-
-
 
 
 # Docker 镜像命令
@@ -86,7 +84,8 @@ services:
       - TZ=Asia/Shanghai
     privileged: true
 
- docker compose -f ./docker-compose-nginx.yaml up
+
+docker compose -f ./docker-compose-nginx.yaml up
 
 docker exec -it nginx /bin/bash
 

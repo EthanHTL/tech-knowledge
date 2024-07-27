@@ -17,5 +17,5 @@
     }
   },
   // "exclude": ["**/node_modules/**", "**/.cache/**", "**/.temp/**", "**/lib/**", "**/dist/**"]
-  "exclude": [ "**/.cache/**", "**/.temp/**"]
+  "exclude": [ "**/.cache/**", "**/.temp/**", "node_modules"]
 }
