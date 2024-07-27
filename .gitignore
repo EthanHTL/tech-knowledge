@@ -1,6 +1,6 @@
 # Node modules
 **/node_modules/**
-
+**/.vscode/**
 # Build files
 docs-shared/lib/
 packages/*/lib/

@@ -26,5 +26,5 @@ export default [   // export default [  ==  export const plugins: PluginConfig =
     autoFrontmatterPlugin(frontmatter),
     searchProPlugin(searchPro),
     catalogPlugin(catalog),
-    commentPlugin(gicus),
+    commentPlugin(gicus), // 评论
 ]

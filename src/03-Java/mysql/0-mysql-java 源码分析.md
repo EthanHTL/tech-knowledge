@@ -570,7 +570,7 @@ private void proceedHandshakeWithPluggableAuthentication(String user, String pas
 
 **最后用一张图，来总结下整个过程。**
 
-![mysql 建立连接过程](http://47.109.181.145:8000/i/2024/07/25/z2t7tr-2.webp)
+![mysql 建立连接过程](http://hicoding.top:8000/i/2024/07/25/z2t7tr-2.webp)
 
 
 

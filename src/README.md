@@ -35,7 +35,7 @@ projects:
     name: 个人简历
     desc: 简历页面(待开发)
     link: null
-footer: 一只小小鸟，想要飞得更高
+footer: <a target='_blank' href='https://beian.miit.gov.cn' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><img src='/assets/beian.png' alt='公安备案' style='float:left;'/>渝ICP备2024037281号-1</a>
 author: H T L
 createTime: 2024/06/07 21:25:51
 date: 2024-06-08

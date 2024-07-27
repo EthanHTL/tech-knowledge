@@ -54,7 +54,7 @@ order: 1
 
 ### 效果预览
 
-![自动登录效果](http://47.109.181.145:8000/i/2024/07/26/r10jey-2.webp)
+![自动登录效果](http://hicoding.top:8000/i/2024/07/26/r10jey-2.webp)
 
 
 ### 解释说明
@@ -85,4 +85,4 @@ IDEA 设置：Settings -> Apifox Helper -> 代码识别 -> 自定义规则
 @[code groovy:line-numbers](./apifox.groovy)
 
 
-![IDEA配置效果](http://47.109.181.145:8000/i/2024/07/26/qyij8e-2.webp)
+![IDEA配置效果](http://hicoding.top:8000/i/2024/07/26/qyij8e-2.webp)

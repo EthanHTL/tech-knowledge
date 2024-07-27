@@ -8,7 +8,7 @@ export const locales: LocaleConfig = {
 
     sidebar: zhSidebar,
 
-    footer: '默认页脚',
+    footer: "一只小小鸟，想要飞得更高",
 
     displayFooter: true,
 
