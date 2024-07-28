@@ -1,8 +1,7 @@
 import { defineUserConfig } from 'vuepress'
-import plugins from './plugins/index'
-import {bundlerOptions} from './plugins/bundlerOptions'
 import theme from './theme'
-import { viteBundler } from '@vuepress/bundler-vite'
+import plugins from './plugins/index'
+// import { bundlerOptions } from './plugins/bundlerOptions'
 
 export default defineUserConfig({
   base: '/',
