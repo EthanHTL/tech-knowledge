@@ -1,5 +1,6 @@
 ---
 title: Nginx
-date: 2024-07-16
-author: H T L
+author: H·T·L
+date: 2024-07-29
+permalink: /03-Java/nginx/
 ---

@@ -17,6 +17,7 @@
     "@vuepress/helper": "^2.0.0-rc.33",
     "@vuepress/plugin-catalog": "2.0.0-rc.34",
     "@vuepress/plugin-comment": "2.0.0-rc.40",
+    "@vuepress/plugin-copyright": "next",
     "@vuepress/plugin-markdown-container": "2.0.0-rc.30",
     "@vuepress/plugin-prismjs": "2.0.0-rc.34",
     "date-fns": "^3.6.0",

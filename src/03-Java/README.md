@@ -5,6 +5,6 @@ article: false
 index: false
 date: 2024-07-02
 layout: AutoArticleListLayout
-permalink: /java/
+permalink: /03-Java/
 author: H T L
 ---

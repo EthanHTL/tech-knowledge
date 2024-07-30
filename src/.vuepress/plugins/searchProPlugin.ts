@@ -13,18 +13,26 @@ export const searchPro: SearchProPluginOptions = {
   autoSuggestions: false,
   customFields: [
     {
+      name: "author",
+      getter: (page) => page.frontmatter.author,
+      formatter: {
+        '/': '作者：$content',
+        '/en/': 'Author: $content'
+      }
+    },
+    {
       getter: (page) => page.frontmatter.category,
       formatter: {
         '/en/': 'Category: $content',
         '/': '分类：$content',
-      },
+      }
     },
     {
       getter: (page) => page.frontmatter.tag,
       formatter: {
         '/': 'Tag: $content',
         '/zh/': '标签：$content',
-      },
+      }
     },
   ],
   locales: {

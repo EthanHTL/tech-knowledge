@@ -24,8 +24,6 @@ server版：https://ubuntu.com/download/server/arm
 
 ### 注册页面
 
-
-
 【Your name | 您的姓名】： 计算机登录时，显示的名字，登录之后就没什么用了
 
 【Your computer’s name | 计算机名】： hostname ，shell终端的命令提示符格式： **user@hostname:~$:** 
@@ -33,6 +31,8 @@ server版：https://ubuntu.com/download/server/arm
 【Pick a username | 选择一个用户名】：user，当前登录的用户名
 
 【Password】: user对应的登录密码
+
+![image-20240729115705150](http://images.hicoding.top/i/2024/07/29/j4w623-2.webp)
 
 ### 修改hostname
 

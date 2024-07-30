@@ -1,7 +1,7 @@
 ---
 title: Docker 入门
 date: 2024-07-08
-permalink: /java/docker/zb8nini8/
+permalink: /03-Java/docker/zb8nini8/
 category:
   - 教程
   - VuePress
