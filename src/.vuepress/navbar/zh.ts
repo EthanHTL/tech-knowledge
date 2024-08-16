@@ -3,13 +3,12 @@ import { navbar } from 'vuepress-theme-hope'
 export const zhNavbar = navbar([
   '/',
   '/cookbook/',
-  '/java/',
   '/04-spring/',
-  // {
-  //   text: "Java",
-  //   icon: "i-logos:java w-1em h-1em",
-  //   link: "/java/",
-  // },
+  {
+    text: "Java",
+    icon: "i-logos:java w-1em h-1em",
+    link: "/03-Java/",
+  },
   {
     text: '分类',
     icon: 'pen-to-square',

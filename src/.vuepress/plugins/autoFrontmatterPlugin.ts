@@ -60,7 +60,7 @@ export const frontmatter: AutoFrontmatterOptions = {
         title(title, { relativePath }) {
           if (title) return title
           const basename = path.basename(relativePath || '', '.md')
-          console.log('basename', basename)
+          // console.log('basename', basename)
           return basename
         },
         order(order: Array<string>, { relativePath }, data: any) {

@@ -8,7 +8,8 @@
     "docs:dev": "vuepress-vite dev src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
     "docs:build": "vuepress-vite build src",
-    "docs:update-package": "pnpm dlx vp-update"
+    "docs:update-package": "pnpm dlx vp-update",
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@pengzhanbo/utils": "^1.1.2",
@@ -23,6 +24,7 @@
     "date-fns": "^3.6.0",
     "nanoid": "^5.0.7",
     "nodejs-jieba": "^0.1.2",
+    "typescript": "^5.5.4",
     "vue": "^3.4.27",
     "vue-router": "^4.4.0",
     "vuepress": "2.0.0-rc.14",

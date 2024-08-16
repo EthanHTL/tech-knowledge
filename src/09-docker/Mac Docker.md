@@ -57,8 +57,11 @@ docker cp mysql-8:/etc/my.cnf /srv/docker/mysql/conf
 mysql --help | grep my.cnf 
 
 # 连接数据库测试
- mysql -uroot -p     # 密码 12345678
+ mysql -uroot -p12345678     # 密码 12345678
   mysql -uhuang -p     # 密码 12345678
+#修改密码
+mysqladmin -u用户名 -p旧密码 password 新密码
+mysqladmin -u root -h '%'  -p --ssl-mode=required  password 7ow9PBz2sqEqYi
 ```
 
 ### Nginx

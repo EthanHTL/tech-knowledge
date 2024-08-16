@@ -38,6 +38,7 @@ zsh --version
 
 echo $SHELL #当前shell
 cat   /etc/shells # 所有shell
+chsh -s /bin/zsh # 切换zsh
 
 #设置默认shell
 #r oot用户
@@ -99,7 +100,7 @@ cd ~/.oh-my-zsh/themes && ls
 
 
 
-### 配置powerlevel10k主题
+### powerlevel10k主题
 
 2. 根据 [What’s the best theme for Oh My Zsh?](https://www.slant.co/topics/7553/~theme-for-oh-my-zsh) 中的排名，以及自定义化、美观程度。强烈建议使用 [powerlevel10k](https://github.com/romkatv/powerlevel10k) 主题。
 
@@ -116,6 +117,17 @@ cd ~/.oh-my-zsh/themes && ls
 ```bash
 # 重新配置
 p10k configure
+```
+
+
+
+### ultima 主题
+
+官网：https://github.com/egorlem/ultima.zsh-theme
+
+```
+git clone https://github.com/egorlem/ultima.zsh-theme ~/ultima-shell
+mv ~/ultima-shell/ultima.zsh-theme $ZSH/themes/ultima.zsh-theme
 ```
 
 

@@ -1,13 +1,25 @@
 {
+  // 所有配置项： https://www.typescriptlang.org/tsconfig/#
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "ES2022",
-    "lib": ["DOM", "ES2022"],
-    "module": "ESNext",
-    "allowSyntheticDefaultImports": true,
+    "target": "esnext", // 指定ts文件被编译的ts版本 eg. es3 es6 es6/es2015 es2016-es2023  esnext 
+    "module": "esnext", // 指定要使用的模块化的规范  eg. commonjs amd es6 ...
+    "lib": ["DOM", "esnext"], // 指定项目中要使用的库
+    "allowSyntheticDefaultImports": true, // 允许合成默认导入 eg. import React 代替 import * as React
+    "outDir": "target",         // 用来指定编译的输出目录
+    // "outFile": "./dist/app.js",  // 代码合并到一个文件
+    // "allowJs": true,             // 是否对js文件进行编译，默认false
+    // "checkJs": false,            // 是否检测js文件符合语法规范，默认false
+    // "removeComments": false,     // 是否删除注释
+    // "noEmit": true,              // 不生成编译文件
+    "noEmitOnError": true,       // 当有错误时不生成编译文件
+    // "alwaysStrict": true,        // 启用所有严格类型检查选项
+    // "noImplicitAny": true,       // 不允许隐式的any类型
+    // "noImplicitThis": true,      // 不允许this有隐式的any类型
+    // "strict": true,              // 启用所有的严格类型检查选项, 总开关, true时所有strict配置都开启
+    // "strictNullChecks": true,    // 启用严格的null检查
+    // "strictFunctionTypes": true, // 启用对函数类型的严格检查
     // "moduleResolution": "Bundler",
-    // "noImplicitAny": false,
-    // "noEmitOnError": true,
     // "skipLibCheck": true
   }
 }

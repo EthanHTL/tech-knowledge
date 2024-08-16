@@ -1,21 +1,20 @@
 {
   "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "node", // 模块解析策略 eg. Node Classic
+    "paths": {
+      "@/*": ["src/*"],
+      "@theme-hope/*": ["node_modules/vuepress-theme-hope/lib/client/*"],
+      "vuepress-theme-hope/presets/*": ["node_modules/vuepress-theme-hope/lib/presets/*"],
+      "vuepress/*": ["node_modules/vuepress/dist/*"]
+    } ,
+    // "types": [
+    //   "vuepress/client-types"
+    // ],
+  },
   "include": [
     "src/.vuepress/**/*.ts",
     "src/.vuepress/**/*.vue"
   ],
-  "compilerOptions": {
-    "moduleResolution": "node",
-    "types": [
-      "vuepress/client-types"
-    ],
-    "paths": {
-      "~/*": ["src/*"],
-      "@theme-hope/*": ["node_modules/vuepress-theme-hope/lib/client/*"],
-      "vuepress-theme-hope/presets/*": ["node_modules/vuepress-theme-hope/lib/presets/*"],
-      "vuepress/*": ["node_modules/vuepress/dist/*"]
-    }
-  },
-  // "exclude": ["**/node_modules/**", "**/.cache/**", "**/.temp/**", "**/lib/**", "**/dist/**"]
   "exclude": [ "**/.cache/**", "**/.temp/**","**/node_modules/**"]
 }

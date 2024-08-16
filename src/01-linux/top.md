@@ -31,13 +31,13 @@ permalink: /01-linux/z9dk5zfe/
 >
 > -n<次数> 循环显示的次数
 
-#### 参考博客
+#### 参考文章
 
-https://linuxtools-rst.readthedocs.io/zh-cn/latest/tool/top.html
+- https://linuxtools-rst.readthedocs.io/zh-cn/latest/tool/top.html
 
 ## 效果
 
-<img src="https://cdn.jsdelivr.net/gh/EthanHTL/picture-repository/blog/top_commond.png" style="zoom: 33%;" />
+
 
 ## 说明
 

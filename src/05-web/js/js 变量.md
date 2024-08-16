@@ -9,8 +9,15 @@ author: H T L
 order: 1
 ---
 
-
 ## 作用域
+
+> 作用域（scope）指的是变量存在的范围。在 ES5 的规范中，JavaScript 只有两种作用域：
+>
+> 一种是全局作用域，变量在整个程序中一直存在，所有地方都可以读取；
+>
+> 另一种是函数作用域，变量只在函数内部存在。
+>
+> ES6 又新增了块级作用域.
 
 视频：https://www.youtube.com/watch?v=Pychc22EG4Q
 
