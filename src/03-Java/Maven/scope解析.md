@@ -78,7 +78,7 @@ permalink: /03-Java/Maven/zran3ns8/
 
 #### import
 
-它只使用在<dependencyManagement>中，表示从其它的pom中导入dependency的配置，例如 (B项目导入A项目中的包配置)
+它只使用在\<dependencyManagement\>中，表示从其它的pom中导入dependency的配置，例如 (B项目导入A项目中的包配置)
 
 想必大家在做SpringBoot应用的时候，都会有如下代码：
 
@@ -145,7 +145,7 @@ permalink: /03-Java/Maven/zran3ns8/
 </dependency>
 ```
 
-**注意：import scope只能用在<dependencyManagement>里面**
+**注意：import scope只能用在\<dependencyManagement\>里面**
 
 这样，父模块的pom就会非常干净，由专门的packaging为pom来管理依赖，也契合的面向对象设计中的单一职责原则。此外，我们还能够创建多个这样的依赖管理pom，以更细化的方式管理依赖。这种做法与面向对象设计中使用组合而非继承也有点相似的味道。
 
