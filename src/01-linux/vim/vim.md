@@ -5,7 +5,7 @@ category: []
 tag: []
 author: H·T·L
 date: 2024-08-09
-permalink: /01-linux/es3yzyke/
+permalink: /01-linux/vim/es3yzyke/
 ---
 
 

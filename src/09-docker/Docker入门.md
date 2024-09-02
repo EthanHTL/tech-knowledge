@@ -4,10 +4,10 @@ date: 2024-07-08
 permalink: /03-Java/docker/zb8nini8/
 category:
   - 教程
-  - VuePress
+  - docker
 tag:
   - 配置
-  - VuePress
+  - docker
 author: H T L
 order: 1
 ---

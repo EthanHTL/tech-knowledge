@@ -8,14 +8,13 @@ tag: []
 author: H·T·L
 date: 2024-08-16
 permalink: /03-Java/Nginx/bv47bs4a/
+photoswipe: true
 ---
 
 
-## Https证书
+## 免费SSL证书
 
-### 免费SSL证书
-
-#### ohttps 
+### ohttps 
 
 [官网 https://ohttps.com](https://ohttps.com)
 
@@ -23,29 +22,30 @@ permalink: /03-Java/Nginx/bv47bs4a/
 
 1. 控制台 => 【证书管理】 =>【创建证书】
 
-<img src="http://images.hicoding.top/i/2024/08/16/ih3909-2.webp" alt="image-20240816111647312" style="zoom:33%;" />
+![ih3909-2](http://images.hicoding.top/i/2024/08/16/ih3909-2.webp)
+
 
 2. 控制台 => 【DNS授权】 => 【添加授权】
 
 》[配置阿里云DNS授权](https://ohttps.com/docs/dns/aliyun)
 
-<img src="http://images.hicoding.top/i/2024/08/16/iiww1i-2.webp" alt="image-20240816112015230" style="zoom:33%;" />
+![iiww1i-2](http://images.hicoding.top/i/2024/08/16/iiww1i-2.webp)
 
 3. 控制台 => 【部署节点】 => 【添加节点】
 
 》[配置阿里云SSL](https://ohttps.com/docs/cloud/aliyun/ssl)
 
-<img src="http://images.hicoding.top/i/2024/08/16/imovv0-2.webp" alt="部署节点" style="zoom:33%;" />
+![imovv0-2](http://images.hicoding.top/i/2024/08/16/imovv0-2.webp)
 
-<img src="http://images.hicoding.top/i/2024/08/16/in1rkk-2.webp" alt="配置阿里云SSL" style="zoom:33%;" />
+![in1rkk-2](http://images.hicoding.top/i/2024/08/16/in1rkk-2.webp)
 
 4. 阿里云配置SSL证书部署任务 - 云服务器部署
 
-<img src="https://images.hicoding.top/i/2024/08/16/oyj0mo-3.webp" alt="阿里云-数字证书管理" style="zoom:33%;" />
+![阿里云-数字证书管理](http://images.hicoding.top/i/2024/08/16/oyj0mo-3.webp)
 
-<img src="https://images.hicoding.top/i/2024/08/16/ozazt2-3.webp" alt="云服务器部署" style="zoom:33%;" />
+![云服务器部署](http://images.hicoding.top/i/2024/08/16/ozazt2-3.webp)
 
-5. 配置nginx
+1. 配置nginx
 
 ```nginx
 # 修改conf.d 目录下的 default.conf 文件
@@ -92,4 +92,10 @@ server {
 }
 ```
 
-#### cerbot
+### cerbot
+
+#### 参考文章
+
+[[1] cerbot官网: https://certbot.eff.org/](https://certbot.eff.org/)
+
+[[2] jimmysong 申请证书](https://jimmysong.io/blog/free-certificates-with-certbot/)

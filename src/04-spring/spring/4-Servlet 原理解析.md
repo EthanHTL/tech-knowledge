@@ -1,10 +1,14 @@
 ---
 title: 4-Servlet 原理解析
-order: 1
-category: []
-tag: []
+order: 4
+category:
+  - Java
+  - Spring
+tag:
+  - Java
+  - Spring
 author: H·T·L
-date: 2024-07-29
+date: 2024-08-04
 permalink: /04-spring/spring/x3hgex8h/
 ---
 Servlet 原理解析

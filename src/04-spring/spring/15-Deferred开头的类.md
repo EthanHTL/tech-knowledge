@@ -4,7 +4,7 @@ order: 1
 category: []
 tag: []
 author: H·T·L
-date: 2024-07-29
+date: 2024-08-15
 permalink: /04-spring/spring/76xw3ktz/
 ---
 在Spring中，一些以Deferred开头的类主要用于在Spring容器初始化过程中，延迟地选择要导入的配置类或Bean，并进行一些后续处理。

@@ -4,7 +4,7 @@ order: 1
 category: []
 tag: []
 author: H·T·L
-date: 2024-07-29
+date: 2024-07-27
 permalink: /04-spring/spring-cloud/y7w1f7f7/
 ---
 # Seata 配置使用

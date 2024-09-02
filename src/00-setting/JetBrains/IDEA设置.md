@@ -10,6 +10,9 @@ permalink: /00-setting/IDE/p1yc2xqk/
 
 
 
+> mac中idea配置（字体、插件、外观）目录：**/Users/aurora/Library/Application Support/JetBrains**
+>
+> window版本： C:\Users\Administrator\AppData\Roaming\JetBrains\IntelliJIdea2021.1\options
 
 ## 自定义代码片段
 

@@ -11,7 +11,7 @@ author: H·T·L
 date: 2024-07-29
 permalink: /03-Java/JDK/0cg2pjom/
 ---
-# 07动态代理
+# JDK动态代理
 
 ### 1、jdk的动态代理
 

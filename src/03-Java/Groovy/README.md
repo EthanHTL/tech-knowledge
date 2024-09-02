@@ -1,5 +1,13 @@
 ---
-title:
+title: Groovy
+order: 1
+category: []
+tag: []
 author: H·T·L
-date: 2024-07-29
+date: 2024-08-27
+article: false
+index: false
+permalink: /03-Java/Groovy/
 ---
+
+

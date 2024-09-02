@@ -1,10 +1,14 @@
 ---
 title: 3-spring 启动流程
-order: 1
-category: []
-tag: []
+order: 3
+category:
+  - Java
+  - Spring
+tag:
+  - Java
+  - Spring
 author: H·T·L
-date: 2024-07-29
+date: 2024-08-03
 permalink: /04-spring/spring/tpsu34oi/
 ---
 所有文档：https://docs.spring.io/spring-boot/docs

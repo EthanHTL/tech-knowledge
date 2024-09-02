@@ -1,10 +1,10 @@
 ---
 title: 6_GC and Tuning
-order: 1
+order: 7
 category: []
 tag: []
 author: H·T·L
-date: 2024-07-29
+date: 2024-05-08
 permalink: /03-Java/JVM/is5x9hpj/
 ---
 # GC和GC Tuning
@@ -15,7 +15,7 @@ permalink: /03-Java/JVM/is5x9hpj/
 
 #### 根对象
 
-<img src="./img/image-20240123165626955.png" alt="image-20240123165626955" style="zoom: 33%;" />
+![image-20240123165626955](./img/image-20240123165626955.png)
 
 #### 1.什么是垃圾
 

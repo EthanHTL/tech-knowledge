@@ -4,11 +4,10 @@ isOriginal: true
 date: 2024-07-09
 permalink: /03-Java/docker/bpd1j2jm/
 category:
-  - 教程
-  - VuePress
+  - docker
 tag:
-  - 配置
-  - VuePress
+  - 脚本
+  - docker
 author: H T L
 order: 1
 toc: true

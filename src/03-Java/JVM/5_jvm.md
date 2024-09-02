@@ -1,10 +1,10 @@
 ---
 title: 5_jvm
-order: 1
+order: 6
 category: []
 tag: []
 author: H·T·L
-date: 2024-07-29
+date: 2024-05-07
 permalink: /03-Java/JVM/be1r0zlb/
 ---
 ## Runtime Data Area and Instruction Set

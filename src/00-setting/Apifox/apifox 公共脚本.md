@@ -6,6 +6,7 @@ category:
   - apifox
 tag:
   - 脚本
+star: true
 author: H T L
 order: 1
 ---

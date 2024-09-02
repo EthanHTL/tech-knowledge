@@ -14,7 +14,7 @@ permalink: /03-Java/Maven/odtgsjd1/
 
 > 官网参考：https://maven.apache.org/ref/3.9.8/maven-model/maven.html
 
-
+<!-- more -->
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

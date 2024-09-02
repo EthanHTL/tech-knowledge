@@ -1,10 +1,14 @@
 ---
 title: 1-spring源码编译篇
 order: 1
-category: []
-tag: []
+category:
+  - Java
+  - Spring
+tag:
+  - Java
+  - Spring
 author: H·T·L
-date: 2024-07-29
+date: 2024-08-01
 permalink: /04-spring/spring/2ytowm9b/
 ---
 [gradle下载仓库]( https://services.gradle.org/distributions/)

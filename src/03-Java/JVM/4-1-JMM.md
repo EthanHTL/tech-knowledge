@@ -1,10 +1,10 @@
 ---
 title: 4-1-JMM
-order: 1
+order: 5
 category: []
 tag: []
 author: H·T·L
-date: 2024-07-29
+date: 2024-05-06
 permalink: /03-Java/JVM/te3ovyx5/
 ---
 volatile 轻量级的同步机制：
@@ -81,13 +81,13 @@ JUC/029_WriteCombining
 > StoreStore屏障：
 >
 > 	对于这样的语句Store1; StoreStore; Store2，
-> 			
+> 				
 > 	在Store2及后续写入操作执行前，保证Store1的写入操作对其它处理器可见。
 >
 > LoadStore屏障：
 >
 > 	对于这样的语句Load1; LoadStore; Store2，
-> 			
+> 				
 > 	在Store2及后续写入操作被刷出前，保证Load1要读取的数据被读取完毕。
 >
 > StoreLoad屏障：

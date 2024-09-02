@@ -29,7 +29,7 @@ export const locales: LocaleConfig = {
         },
         VuePressThemeHope: {
           icon: 'https://theme-hope-assets.vuejs.press/logo.svg',
-          link: 'https://theme-hope.vuejs.press',
+          link: 'https://theme-hope.vuejs.press/zh/',
         },
       },
     },

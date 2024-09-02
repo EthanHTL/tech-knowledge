@@ -1,5 +1,7 @@
 ---
-title:
+title: English
 author: H·T·L
-date: 2024-07-29
+date: 2024-04-15
+article: false
+index: false
 ---

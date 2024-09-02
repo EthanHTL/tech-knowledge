@@ -1,10 +1,10 @@
 ---
 title: 3-ClassLoader&编译过程&懒加载
-order: 1
+order: 3
 category: []
 tag: []
 author: H·T·L
-date: 2024-07-29
+date: 2024-05-04
 permalink: /03-Java/JVM/kwj5eb6l/
 ---
 # 类加载过程

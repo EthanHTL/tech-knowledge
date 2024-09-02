@@ -1,23 +1,24 @@
 ---
-title: 编译Hotspot源码
-order: 1
-category: []
-tag: []
+title: 编译Hotspot源码 - JDK 11
+order: 2
+category:
+  - JDK
+tag:
+  - JDK
+  - 源码
 author: H·T·L
 date: 2024-07-29
 permalink: /03-Java/JDK/is5smgdx/
 ---
-# 编译jdk11 源码
 
-资源：
+# 编译Hotspot源码 - JDK 11
 
-[B站CodeSheep](https://www.bilibili.com/video/BV1zT4y177Zf/?spm_id_from=333.337.search-card.all.click&vd_source=b228bd46ba1fa2f17fbfc85871bb7759)
+### 环境推荐
 
-[CodeSheep博客](https://zhuanlan.zhihu.com/p/160776269)
+1. Mac 或者 ubuntu
+2. 预先安装一个jdk
 
-
-
-##### 第一步
+### 第一步
 
 **下载源码**
 
@@ -40,7 +41,7 @@ hg clone https://hg.openjdk.org/jdk/jdk11/
 https://github.com/openjdk/jdk
 ```
 
-##### 第二步
+### 第二步
 
 ```bash
 // 源码根目录 ， 要在控制台执行， idea 的控制台有bug
@@ -67,7 +68,7 @@ sh configure \
   --with-freetype-lib=/usr/lib/aarch64-linux-gnu
 ```
 
-##### 第三步
+### 第三步
 
 ```bash
 make all
@@ -84,21 +85,19 @@ make images CONF=macosx-aarch64-normal-server-release
  make -C USpace/jdk/jdk11u/ images CONF=macosx-aarch64-normal-server-release
 ```
 
-##### 第四步：关联JDK源码并修改
+### 第四步：关联JDK源码并修改
 
-```bash
-# JDK home path: /Users/aurora/CodeSpace/jdk/jdk11u/build/macosx-aarch64-normal-server-release/images/jdk
-```
+> **JDK home path:** /Users/aurora/CodeSpace/jdk/jdk11u/build/macosx-aarch64-normal-server-release/images/jdk
 
-![img](./img/v2-00cf5cc53fcc428a0e28cf654f693327_1440w.webp)
+![添加JDK](https://images.hicoding.top/i/2024/09/02/2dfd0o-3.webp)
 
-![img](./img/v2-f1295ce4246c954fd0d6a57410701c34_1440w.webp)
+![关联源码](https://images.hicoding.top/i/2024/09/02/2dglfg-3.webp)
 
 ### 问题解决
 
 
 
-##### The tested number of bits in the target (64) differs from the number of bits expected to be found in the target (32)
+#### The tested number of bits in the target (64) differs from the number of bits expected to be found in the target (32)
 
 ```bash
 解决：
@@ -112,7 +111,7 @@ make images CONF=macosx-aarch64-normal-server-release
 
 
 
-##### JDK源码添加中文注释后编译乱码
+#### JDK源码添加中文注释后编译乱码
 
 ```
 // 进入以下目录
@@ -124,9 +123,9 @@ vi SetupJavaCompilers.gmk
 // 找到“-encoding ascii“，替换成 ”-encoding utf-8“
 ```
 
-![img](./img/v2-8ac3c352396b892d223728fdac6ee340_1440w.webp)
+![解决中文乱码](https://images.hicoding.top/i/2024/09/02/2ikfvg-3.webp)
 
-##### configure: error: Could not find freetype! 
+#### configure: error: Could not find freetype! 
 
 ```bash
   sh configure \
@@ -136,4 +135,10 @@ vi SetupJavaCompilers.gmk
 ```
 
 
+
+### 参考文章
+
+[【1】B站CodeSheep](https://www.bilibili.com/video/BV1zT4y177Zf/?spm_id_from=333.337.search-card.all.click&vd_source=b228bd46ba1fa2f17fbfc85871bb7759)
+
+[【2】CodeSheep博客](https://zhuanlan.zhihu.com/p/160776269)
 
