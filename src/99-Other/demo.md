@@ -1,20 +1,25 @@
 ---
 title: Frontmatter 配置
-star: true
 author: H·T·L
 date: 2024-08-27
-permalink: /99-Other/ewp14d8j/
+permalink: /demo/frontmatter/
+star: true
+category:
+  - Markdown
+tag:
+  - Markdown
+order: 1
 ---
 
 
 
+## Frontmatter 摘要
 
+<!-- more -->
 
-## 示例
+## Frontmatter 示例
 
 预览内容
-
-<!-- more-->
 
 ### 笔记头Frontmatter
 
@@ -37,5 +42,6 @@ layout: AutoArticleListLayout
 dir:
   collapsible: false
   order: 1 # 侧边栏排序
+prev: false  # 上一篇链接
+next: /01-linux/Vim/gmmfg4of/ # 下一篇链接
 ```
-

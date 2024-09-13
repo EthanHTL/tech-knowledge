@@ -14,7 +14,7 @@ toc: true
 ---
 
 
-# Docker 镜像命令
+# Docker 常用镜像
 
 ### MYSQL
 
@@ -309,16 +309,72 @@ services:
       - '/root/data/docker_data/easyimage/i:/app/web/i'
     restart: unless-stopped
     
-    
 # 给内存设置swap
 wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && clear && ./box.sh
 
-    
  docker compose -f ./docker-compose-easyimage.yaml up
-
 ```
 
 
+
+### xxl-job
+
+1. git clone 源码
+2. idea 配置并运行   **xxl-job-admin**  目录下的 Dockerfile
+
+```dockerfile
+# Dockerfile
+FROM openjdk:8-jre-slim
+MAINTAINER h.t.l
+
+ENV PARAMS=""
+
+ENV JAVA_OPTS="-Dspring.config.location=/xxl-job/application.properties"
+
+# 复制配置文件到容器中
+COPY ./src/main/resources/application.properties /xxl-job/application.properties
+COPY ./src/main/resources/logback.xml /xxl-job/logback.xml
+
+ENV TZ=PRC
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+ADD target/xxl-job-admin-*.jar /app.jar
+
+ENTRYPOINT ["sh","-c","java -jar $JAVA_OPTS /app.jar $PARAMS"]
+```
+
+3. 编辑并运行 docker-compose.yml 文件
+
+```bash
+# docker-compose.yml
+version: '3.6'
+services:
+  xxl-job:
+    image: xxl-job:2.4.1
+    container_name: xxl-job
+    restart: always
+    ports:
+      - 9001:8080
+    volumes:
+      - /srv/docker/xxl-job/logs:/data/applogs/xxl-job
+      - /srv/docker/xxl-job=/xxl-job
+      
+ docker compose -f ./docker-compose.yaml up
+ docker exec -it xxl-job /bin/sh
+ docker cp xxl-job:/xxl-job /srv/docker
+```
+
+
+
+访问路径：http://ip:9001/xxl-job-admin/  账户密码 admin/123456
+
+![img](https://images.hicoding.top/i/2024/09/06/112izmx-3.webp)
+
+#### 解决无法正常连接mysql文件
+
+在宿主机中运行 `ifconfg`命令 找到docker的虚拟网卡 ==docker0== 对应的虚拟网卡. [参考文章](https://blog.csdn.net/zcf980/article/details/127273181)
+
+![img](https://images.hicoding.top/i/2024/09/06/112ar0z-3.webp)
 
 ### Sentinel
 

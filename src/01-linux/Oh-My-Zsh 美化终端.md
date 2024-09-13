@@ -98,18 +98,21 @@ source ~/.zshrc
 cd ~/.oh-my-zsh/themes && ls
 ```
 
+### 拓展主题
+
+[External-themes](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes)
 
 
 ### powerlevel10k主题
 
 2. 根据 [What’s the best theme for Oh My Zsh?](https://www.slant.co/topics/7553/~theme-for-oh-my-zsh) 中的排名，以及自定义化、美观程度。强烈建议使用 [powerlevel10k](https://github.com/romkatv/powerlevel10k) 主题。
 
-3. ```bash
+```bash
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
    
    # 中国用户可以使用 gitee.com 上的官方镜像加速下载
    git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-   ```
+```
 
 
 在 `~/.zshrc` 设置 `ZSH_THEME="powerlevel10k/powerlevel10k"`。接下来，终端会自动引导你配置 `powerlevel10k`。
@@ -125,14 +128,24 @@ p10k configure
 
 官网：https://github.com/egorlem/ultima.zsh-theme
 
-```
+```bash
 git clone https://github.com/egorlem/ultima.zsh-theme ~/ultima-shell
 mv ~/ultima-shell/ultima.zsh-theme $ZSH/themes/ultima.zsh-theme
+
+git clone https://github.com/heapbytes/heapbytes-zsh.git $ZSH/themes/heapbytes-zsh
 ```
 
-
+‡
+DOUBLE DAGGER
+Unicode: U+2021，UTF-8: E2 80 A1
 
 ## 安装插件
+
+### 插件仓库
+
+[[1] 官方插件库](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+
+[[2] awesome 插件库](https://github.com/unixorn/awesome-zsh-plugins)
 
 ### 插件推荐
 
@@ -160,21 +173,49 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 
 
+#### sudo
+
+sudo 的主要作用是，当我们输入某个命令，如 vim /etc/zshrc，发现没有系统权限，利用 sudo 插件，可快速将 sudo 作为前缀添加到命令最前面。
+
+![img](https://images.hicoding.top/i/2024/09/04/12sueur-3.gif)
+
 #### z
 
 `oh-my-zsh` 内置了 `z` 插件。`z` 是一个文件夹快捷跳转插件，对于曾经跳转过的目录，只需要输入最终目标文件夹名称，就可以快速跳转，避免再输入长串路径，提高切换文件夹的效率。
 
 ![](https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202401012254065.png?size=large)
 
+#### zsh-history-substring-search
+
+[zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) 在使用 zsh 时，通过 ↑ 或 ↓ 方向键，能实现类似按前缀匹配补齐的效果。
+
+而如果输入的是中间的字符串，则没法自动补齐。这个插件真是为这个目的而生的。
+
+```bash
+ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+ 
+ # 1.Activate the plugin in ~/.zshrc
+ plugins=( [plugins...] zsh-history-substring-search)
+
+# 2.绑定快捷键
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+
+#  3.Run exec zsh to take changes into account
+ exec zsh
+```
+
+
+
 #### extract
 
 `oh-my-zsh` 内置了 `extract` 插件。`extract` 用于解压任何压缩文件，不必根据压缩文件的后缀名来记忆压缩软件。使用 `x` 命令即可解压文件
 
 ![](https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202401012259966.png?size=large)
-
-#### web-search
-
-oh-my-zsh 内置了 `web-search` 插件。`web-search` 能让我们在命令行中使用搜索引擎进行搜索。使用`搜索引擎关键字+搜索内容` 即可自动打开浏览器进行搜索。
 
 
 
@@ -183,7 +224,7 @@ oh-my-zsh 内置了 `web-search` 插件。`web-search` 能让我们在命令行�
 修改`~/.zshrc`中插件列表为：
 
 ```bash
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)
+plugins=(git z extract sudo zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 ```
 
 ![](https://cdn.haoyep.com/gh/leegical/Blog_img/cdnimg/202401012304774.png?size=large)

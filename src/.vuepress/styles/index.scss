@@ -17,3 +17,16 @@
   --catalog-active-color: #3eaf7c;
   --catalog-hover-color: #71cda3;
 }
+
+
+.vp-code-tab-nav {
+  min-width: 4rem;
+}
+
+// .vp-code-tab{
+//   margin-top: 14px;
+// }
+
+.vp-code-tab-nav::before, .vp-code-tab-nav::after {
+  z-index: auto;
+}

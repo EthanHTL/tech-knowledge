@@ -50,20 +50,21 @@ cd /Users/aurora/JDK/jdk11u-jdk
 sh ./get_source.sh
 
 sh configure \
+  --disable-warnings-as-errors \
+  --with-boot-jdk=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home \
+  --with-toolchain-path=/Applications/Xcode.app/Contents/Developer/usr/bin
+  
+# 其它配置
   --with-target-bits=32 \
   --enable-debug \
   --enable-dtrace \
   --disable-ccache \
   --disable-warnings-as-errors \
- 
   --with-jvm-variants=server \
   --with-boot-jdk=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home \
   --with-toolchain-path=/Applications/Xcode.app/Contents/Developer/usr/bin
-  
-  
-  sh configure \
-    --with-boot-jdk=/usr/lib/jvm/java-8-openjdk-arm64
-  --enable-debug \
+   
+  --with-boot-jdk=/usr/lib/jvm/java-8-openjdk-arm64 \
   --with-freetype-include=/usr/include/freetype2 \
   --with-freetype-lib=/usr/lib/aarch64-linux-gnu
 ```
@@ -79,10 +80,10 @@ make images
 
 # 指定版本编译 mac / ubuntu
 make images CONF=macosx-aarch64-normal-server-release
- make images CONF=linux-aarch64-normal-server-release
+make images CONF=linux-aarch64-normal-server-release
  
  #指定make 目录运行
- make -C USpace/jdk/jdk11u/ images CONF=macosx-aarch64-normal-server-release
+make -C ~/USpace/jdk/jdk11u/ images CONF=macosx-aarch64-normal-server-release
 ```
 
 ### 第四步：关联JDK源码并修改

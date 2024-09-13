@@ -1,6 +1,7 @@
 ---
 title: Markdown 示例
 icon: fab fa-markdown
+star: true
 order: 2
 category:
   - 教程

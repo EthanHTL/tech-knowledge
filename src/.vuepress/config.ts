@@ -5,7 +5,7 @@ import plugins from './plugins/index'
 
 export default defineUserConfig({
   base: '/',
-  port: 9090,
+  port: 19090,
   // 站点多语言配置
   locales: {
     '/': {
