@@ -73,15 +73,15 @@ https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 
 | 快捷键                                  | From                                  | to                                                           |
 | :-------------------------------------- | :------------------------------------ | :----------------------------------------------------------- |
-| <kbd>cs"'</kbd>                         | "Hello world!"                        | 'Hello world!'                                               |
-| <kbd>cs'<q></kbd>                       | <q>Hello world!</q>                   | \<q>Hello world!\</q>                                        |
-| <kbd>cst"</kbd>                         | \<q>Hello world!\</q>                 | "Hello world!"                                               |
-| <kbd>ds"</kbd>                          | "Hello world!"                        | Hello world!                                                 |
+| <kbd>cs\"\'</kbd>                       | "Hello world!"                        | 'Hello world!'                                               |
+| <kbd>cs\'\<q\></kbd>                    | <q>Hello world!</q>                   | \<q>Hello world!\</q>                                        |
+| <kbd>cst\"</kbd>                        | \<q>Hello world!\</q>                 | "Hello world!"                                               |
+| <kbd>ds\"</kbd>                         | "Hello world!"                        | Hello world!                                                 |
 | <kbd>ysiw]</kbd>                        | Hello world!  (the cursor on "Hello") | [Hello] world!                                               |
 | <kbd>cs]{</kbd>                         | [Hello] world!                        | { Hello } world!                                             |
 | <kbd>yssb</kbd>                         | { Hello } world!                      | ({ Hello } world!)                                           |
 | <kbd>ds{ds)</kbd>                       | ({ Hello } world!)                    | Hello world!                                                 |
-| <kbd>ysiw<em></kbd>                     | Hello world!                          | \<em>Hello\</em> world!                                      |
+| <kbd>ysiw\<em\></kbd>                   | Hello world!                          | \<em>Hello\</em> world!                                      |
 | <kbd>S\<p class="important">\</p></kbd> | \<em>Hello\</em> world!               | \<p class="important"><br/>  <em>Hello</em> world!<br/>\</p> |
 
 ## argTexttobj - 参数操作插件

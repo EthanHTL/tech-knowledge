@@ -1,11 +1,12 @@
 ---
 title: 10-mysql 优化
 order: 1
-category: []
+category:
+  - MySQL
 tag: []
 author: H·T·L
 date: 2024-07-28
-permalink: /03-Java/mysql/4iyh2lyb/
+permalink: /03-Java/MySQL/4iyh2lyb/
 ---
 
 

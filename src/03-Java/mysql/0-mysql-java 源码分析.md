@@ -1,11 +1,12 @@
 ---
 title: mysql-java 源码分析
 order: 1
-category: []
+category:
+  - MySQL
 tag: []
 author: H·T·L
 date: 2024-07-25
-permalink: /03-Java/mysql/oz7s285v/
+permalink: /03-Java/MySQL/oz7s285v/
 ---
 
 
