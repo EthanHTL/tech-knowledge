@@ -15,6 +15,10 @@ next: /01-linux/Vim/gmmfg4of/
 
 # Vim 快捷键 - 高效入门
 
+![Vim Cheat Sheet for Programmers](https://images.hicoding.top/i/2024/09/18/2bk0nc-3.webp)
+
+<!-- more -->
+
 ## Vim设计理念
 
 > Vim 的核心设计理念是  Action + Range 的模式  -  可以参考这种方式快速记忆命令
@@ -34,11 +38,13 @@ next: /01-linux/Vim/gmmfg4of/
 
 ### 1.通用操作
 
-| 快捷键              | 描述           | 意义     |
-| :------------------ | :------------- | -------- |
-| <kbd>.</kbd>        | 重复上一次操作 |          |
-| <kbd>u</kbd>        | 撤销上一次操作 | u - undo |
-| <kbd>ctrl + r</kbd> | 恢复前次操作   |          |
+| 快捷键              | 描述                               | 意义     |
+| :------------------ | :--------------------------------- | -------- |
+| <kbd>.</kbd>        | 重复前次操作                       |          |
+| <kbd>u</kbd>        | 撤销前次操作                       | u - undo |
+| <kbd>ctrl + r</kbd> | 恢复前次操作                       |          |
+| <kbd>;</kbd>        | 重复上次的字符查找命令(f、F、t、T) |          |
+| <kbd>,</kbd>        | 反向查找上次的查找命令(f、F、t、T) |          |
 
 ### 2.光标移动
 
@@ -58,16 +64,18 @@ next: /01-linux/Vim/gmmfg4of/
 | <kbd>e</kbd>  /  <kbd>E</kbd>                                | 下一个单词【尾部】                                           |                                               |
 | <kbd>b</kbd>  /  <kbd>B</kbd>                                | 上一个单词【首部】                                           |                                               |
 | <kbd>ge</kbd>                                                | 上一个单词【尾部】                                           |                                               |
+| <kbd>gE</kbd>                                                | 上一个单词【尾部】,范围更大                                  |                                               |
+|                                                              |                                                              |                                               |
 | ==句子和段落移动==                                           |                                                              |                                               |
 | <kbd>(</kbd>  /  <kbd>)</kbd>                                | 前移1句  / 后移1句                                           | sentences                                     |
 | <kbd>{</kbd>  /  <kbd>}</kbd>                                | 前移1段  /  后移1段                                          | paragraphs                                    |
 | ==文档移动==                                                 |                                                              |                                               |
 | <kbd>gg</kbd>  /  <kbd>G </kbd>                              | 调整至【文档】第一行  /  到最后一行                          | g - game over                                 |
 | ==查找移动==                                                 |                                                              |                                               |
-| <kbd>f + {char}</kbd>                                        | 光标跳到下一个{char}所在的位置                               |                                               |
-| <kbd>F + {char} </kbd>                                       | 光标反向跳到上一个{char}所在的位置                           |                                               |
-| <kbd>t + {char}</kbd>                                        | 光标跳到下个{char}的前一个字符的位置                         |                                               |
-| <kbd>T + {char} </kbd>                                       | 光标反向移动到上个{char}的后一个字符的位置                   |                                               |
+| <kbd>f</kbd>`{char}`                                         | 光标跳到下一个{char}所在的位置                               |                                               |
+| <kbd>F</kbd>`{char}`                                           | 光标反向跳到上一个{char}所在的位置                           |                                               |
+| <kbd>t</kbd>`{char}`                                           | 光标跳到下个{char}的前一个字符的位置                         |                                               |
+| <kbd>T</kbd>`{char}`                                           | 光标反向移动到上个{char}的后一个字符的位置                   |                                               |
 | <kbd>;</kbd>                                                 | 重复上次的字符查找命令                                       |                                               |
 | <kbd>,</kbd>                                                 | 反向查找上次的查找命令                                       |                                               |
 | ==其它移动==                                                 |                                                              |                                               |
@@ -173,25 +181,27 @@ next: /01-linux/Vim/gmmfg4of/
 
 #### 5.2 插入&修改
 
-| 快捷键                                | 描述                                                  | 意义       |
-| :------------------------------------ | :---------------------------------------------------- | ---------- |
-| <kbd>i</kbd>                          | 在光标前插入                                          |            |
-| <kbd>I</kbd>  /  <kbd>shift + i</kbd> | 在当前行第一个非空字符前插入                          |            |
-| <kbd>gI</kbd>                         | 在当前行第一列插入                                    |            |
-| <kbd>o</kbd>  /  <kbd>O</kbd>         | 在下面新增一行  /  在上面新增一行, 进入insert模式     |            |
-| <kbd>a</kbd>  /  <kbd>A</kbd>         | 在光标后插入  /  在当前行最后插入                     |            |
-| <kbd>c</kbd>                          | 修改                                                  | c - change |
-| <kbd>x</kbd>                          | 裁剪                                                  |            |
-|                                       |                                                       |            |
-| :r filename                           | 在当前位置插入另一个文件的内容                        |            |
-| :[n]r filename                        | 在第n行插入另一个文件的内容                           |            |
-| ==插入模式下移动光标==                |                                                       |            |
-| ctrl + f                              | 光标向后移动 ?无用                                    |            |
-| ctrl + b                              | 光标向前移动 ?无用                                    |            |
-| ==进阶操作==                          |                                                       |            |
-| <kbd>df{char}</kbd>                   | 配合f{char}命令使用，快速删除到指定字符               |            |
-| <kbd>cf{char}</kbd>                   | 配合f{char}命令使用，快速删除到指定字符并进入编辑模式 |            |
-|                                       |                                                       |            |
+| 快捷键                                      | 描述                                                  | 意义               |
+| :------------------------------------------ | :---------------------------------------------------- | ------------------ |
+| <kbd>i</kbd>                                | 在光标前插入                                          |                    |
+| <kbd>I</kbd>  /  <kbd>shift + i</kbd>       | 在当前行第一个非空字符前插入                          |                    |
+| <kbd>gI</kbd>                               | 在当前行第一列插入                                    |                    |
+| <kbd>o</kbd>  /  <kbd>O</kbd>               | 在下面新增一行  /  在上面新增一行, 进入insert模式     |                    |
+| <kbd>a</kbd>  /  <kbd>A</kbd>               | 在光标后插入  /  在当前行最后插入                     |                    |
+| <kbd>c</kbd>                                | 修改                                                  | c - change         |
+| <kbd>x</kbd>                                | 裁剪当前字符                                          |                    |
+| <kbd>X</kbd>                                | 裁剪前一个字符                                        |                    |
+| <kbd>s</kbd>                                | 替换, 并进入insert模式                                | s - substitutejjkk |
+|                                             |                                                       |                    |
+| :r filename                                 | 在当前位置插入另一个文件的内容                        |                    |
+| :[n]r filename                              | 在第n行插入另一个文件的内容                           |                    |
+| ==插入模式下移动光标==                      |                                                       |                    |
+| ctrl + f                                    | 光标向后移动 ?无用                                    |                    |
+| ctrl + b                                    | 光标向前移动 ?无用                                    |                    |
+| ==进阶操作==                                |                                                       |                    |
+| <kbd>df{char}</kbd>                         | 配合f{char}命令使用，快速删除到指定字符               |                    |
+| <kbd>cf{char}</kbd>                         | 配合f{char}命令使用，快速删除到指定字符并进入编辑模式 |                    |
+| <kbd>Ctrl + a</kbd>  /  <kbd>Ctrl + x</kbd> | 快速自增 / 自减 数字,  eg:  1->2  或者  10 ->11       |                    |
 
 #### 5.3 删除
 
@@ -212,7 +222,7 @@ next: /01-linux/Vim/gmmfg4of/
 | <kbd>ciw</kbd>  /  <kbd>caw</kbd>                            | 删除单词，并进入编辑模式            |                                                 |
 | <kbd>di”</kbd>  /  <kbd>di(</kbd>  /  <kbd>di{</kbd>         | 删除“”或 ()  或 {}内的内容          |                                                 |
 | <kbd>cw</kbd>  /  <kbd>caw</kbd>                             | 修改【字符 / 单词】，并进入编辑模式 | cw - change a world                             |
-| <kbd>cj{</kbd>                                               | 删除{}里的内容                      |                                                 |
+| <kbd>cj{</kbd>                                               | 删除{}里的内容，向后寻找最近的括号  |                                                 |
 | ==进阶操作==                                                 |                                     |                                                 |
 | <kbd>di^</kbd> / <kbd>da^</kbd><br /> <kbd>di$</kbd> / <kbd>da$</kbd> | 配合 `^` 和 `$` 删除到行头或者行尾  |                                                 |
 |                                                              |                                     |                                                 |
@@ -273,7 +283,7 @@ next: /01-linux/Vim/gmmfg4of/
 ## Visual Mode - 可视模式
 
 | 快捷键                              |                                            |
-| ----------------------------------- | ------------------------------------------ |
+| :---------------------------------- | ------------------------------------------ |
 | <kbd>v</kbd>                        |                                            |
 | <kbd>ctrl + v</kbd>                 | 【可视化块】- 进入可视模式                 |
 | <kbd>V</kbd> = <kbd>shift + v</kbd> | 【可视化行】- 进入可视模式, 默认选中当前行 |
@@ -296,6 +306,7 @@ next: /01-linux/Vim/gmmfg4of/
 | <kbd>vaB</kbd>  / / <kbd>va{</kbd>  | 快速选中 函数部分,包括{}括号     |      |
 | <kbd>vis</kbd>                      |                                  |      |
 | <kbd>vip</kbd>                      |                                  |      |
+| <kbd>U</kbd>                        | 选中内容变大写                   |      |
 
 ## Command-Line / Ex Mode - 命令模式
 
@@ -315,6 +326,23 @@ next: /01-linux/Vim/gmmfg4of/
 
 
 ## 寄存器
+
+参考说明：[https://maniafish.github.io/tech_talk/linux/vim_paste.html](https://maniafish.github.io/tech_talk/linux/vim_paste.html)
+
+vim提供了10类寄存器:
+
+- 匿名寄存器 `""`
+- 编号寄存器 `"0` 到 `"9`
+- 小删除寄存器 `"-`
+- 26个命名寄存器 `"a` 到 `"z`
+- 3个只读寄存器 `":,` `".,` `"%`
+- Buffer交替文件寄存器 `"#`
+- 表达式寄存器 `"=`
+- 选择和拖放寄存器 `"*`, `"+`, `"~`
+- 黑洞寄存器 `"_`
+- 搜索模式寄存器 `"/`
+
+可在vim中通过`:help registers`查看帮助，通过`:reg`可以查看当前各寄存器中的值。
 
 ```
 :reg 显示所有寄存器的内容
@@ -364,12 +392,26 @@ next: /01-linux/Vim/gmmfg4of/
 
 ## 参考文章
 
-https://vimawesome.com/plugin/fugitive-vim
+[vimawesome.com](https://vimawesome.com/plugin/fugitive-vim)
 
-https://www.someget.cn/other/2021/12/05/vim_coustm01.html
 
-https://imageslr.com/2021/vim.html#vs-code
 
-https://github.com/MarsWang42/My-Vim-Conf
+**快捷键指南**
 
-https://pengfeixc.com/blogs/developer-handbook/vim-shortcuts#vim%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7
+[1. https://imageslr.com/2021/vim.html#vs-code](https://imageslr.com/2021/vim.html#vs-code)
+
+[2. https://www.someget.cn/other/2021/12/05/vim_coustm01.html](https://www.someget.cn/other/2021/12/05/vim_coustm01.html)
+
+[3. https://pengfeixc.com/blogs/developer-handbook/vim-shortcuts#vim%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7](https://pengfeixc.com/blogs/developer-handbook/vim-shortcuts#vim%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7)
+
+
+
+**vim配置参考**
+
+[1. https://github.com/MarsWang42/My-Vim-Conf](https://github.com/MarsWang42/My-Vim-Conf)
+
+**vscode vim**
+
+[1. VSCodeVim](https://github.com/VSCodeVim/Vim)
+
+https://fanlumaster.github.io/2023/02/06/%E6%88%91%E7%9A%84-VSCode-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/

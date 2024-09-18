@@ -133,11 +133,11 @@ git clone https://github.com/egorlem/ultima.zsh-theme ~/ultima-shell
 mv ~/ultima-shell/ultima.zsh-theme $ZSH/themes/ultima.zsh-theme
 
 git clone https://github.com/heapbytes/heapbytes-zsh.git $ZSH/themes/heapbytes-zsh
+
+git clone https://github.com/halfo/lambda-mod-zsh-theme.git $ZSH/themes/lambda-mod
 ```
 
-‡
-DOUBLE DAGGER
-Unicode: U+2021，UTF-8: E2 80 A1
+
 
 ## 安装插件
 
