@@ -9,6 +9,7 @@ export const zhNavbar = navbar([
     icon: "i-logos:java w-1em h-1em",
     link: "/03-Java/",
   },
+  '/01-linux/',
   {
     text: '分类',
     icon: 'pen-to-square',

@@ -3,7 +3,7 @@ title: Apifox 公共脚本
 date: 2024-07-09
 permalink: /00-setting/Apifox/czdo8ccr/
 category:
-  - apifox
+  - Apifox
 tag:
   - 脚本
 star: true

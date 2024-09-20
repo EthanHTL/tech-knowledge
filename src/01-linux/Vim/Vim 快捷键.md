@@ -1,12 +1,14 @@
 ---
-5.title: Vim 快捷键 - 高效入门
+title: Vim 快捷键 - 高效入门
 order: 1
-category: []
-tag: []
+category:
+  - Vim
+tag:
+  - 快捷键
 author: H·T·L
 date: 2024-08-09
 permalink: /01-linux/vim/es3yzyke/
-title: Vim 快捷键
+star: true
 prev: false
 next: /01-linux/Vim/gmmfg4of/
 ---
@@ -38,13 +40,13 @@ next: /01-linux/Vim/gmmfg4of/
 
 ### 1.通用操作
 
-| 快捷键              | 描述                               | 意义     |
-| :------------------ | :--------------------------------- | -------- |
-| <kbd>.</kbd>        | 重复前次操作                       |          |
-| <kbd>u</kbd>        | 撤销前次操作                       | u - undo |
-| <kbd>ctrl + r</kbd> | 恢复前次操作                       |          |
-| <kbd>;</kbd>        | 重复上次的字符查找命令(f、F、t、T) |          |
-| <kbd>,</kbd>        | 反向查找上次的查找命令(f、F、t、T) |          |
+| 快捷键              | 描述                                                      | 意义     |
+| :------------------ | :-------------------------------------------------------- | -------- |
+| <kbd>.</kbd>        | 重复前次操作 - 编辑操作                                   |          |
+| <kbd>u</kbd>        | 撤销前次操作                                              | u - undo |
+| <kbd>ctrl + r</kbd> | 恢复前次操作                                              |          |
+| <kbd>;</kbd>        | 重复前次<u>搜索</u>操作 - 查找命令(f、F、t、T)            |          |
+| <kbd>,</kbd>        | 重复前次<u>搜索</u>操作 - 反向查找 - 查找命令(f、F、t、T) | 逗号     |
 
 ### 2.光标移动
 
@@ -55,16 +57,21 @@ next: /01-linux/Vim/gmmfg4of/
 | <kbd>h</kbd>  /  <kbd>j</kbd>  / <kbd>k</kbd>  /  <kbd>l</kbd> | 向 左 / 下 / 上 / 右 移动                                    |                                               |
 | ==行移动==                                                   |                                                              |                                               |
 | <kbd>0</kbd>                                                 | 跳转至 行头                                                  |                                               |
-| <kbd>$</kbd>                                                 | 跳转至行尾                                                   |                                               |
-| <kbd>^</kbd>                                                 | 跳转至 行头  （忽略空格）                                    |                                               |
-| <kbd>g_</kbd>                                                | 跳转至 行尾  （忽略空格）                                    |                                               |
-| <kbd>%</kbd>                                                 | 查找当前行中的 （）[ ] { } 三种括号,并跳转到与之匹配的括号   |                                               |
-| ==word移动==                                                 | 大写`W `                                                     | `E`                                           |
-| <kbd>w</kbd>  /  <kbd>W</kbd>                                | 下一个单词【首部】                                           | ``                                            |
-| <kbd>e</kbd>  /  <kbd>E</kbd>                                | 下一个单词【尾部】                                           |                                               |
-| <kbd>b</kbd>  /  <kbd>B</kbd>                                | 上一个单词【首部】                                           |                                               |
+| <kbd>$</kbd>                                                 | 跳转至 行尾                                                  |                                               |
+| <kbd>^</kbd>                                                 | 跳转至 行头，*<u>智能忽略空格</u>*                           |                                               |
+| <kbd>g_</kbd>                                                | 跳转至 行尾，*<u>智能忽略空格</u>*                           |                                               |
+| <kbd>%</kbd>                                                 | 就近原则 跳转到 匹配的括号                                   | （）[ ] \{ }                                  |
+| ==word移动==                                                 | *<u>大写操作范围更大</u>*                                    |                                               |
+| <kbd>w</kbd>                                                 | 下一个单词【首部】                                           |                                               |
+| <kbd>e</kbd>                                                 | 下一个单词【尾部】                                           |                                               |
+| <kbd>b</kbd>                                                 | 上一个单词【首部】                                           |                                               |
+|                                                              |                                                              |                                               |
+| <kbd>W</kbd>                                                 | 下一个单词【首部】*，忽略标点符号，空格除外*                 |                                               |
+| <kbd>E</kbd>                                                 | 下一个单词【尾部】*，忽略标点符号，空格除外*                 |                                               |
+| <kbd>B</kbd>                                                 | 上一个单词【首部】*，忽略标点符号，空格除外*                 |                                               |
+|                                                              |                                                              |                                               |
 | <kbd>ge</kbd>                                                | 上一个单词【尾部】                                           |                                               |
-| <kbd>gE</kbd>                                                | 上一个单词【尾部】,范围更大                                  |                                               |
+| <kbd>gE</kbd>                                                | 上一个单词【尾部】*，忽略标点符号，空格除外*                 |                                               |
 |                                                              |                                                              |                                               |
 | ==句子和段落移动==                                           |                                                              |                                               |
 | <kbd>(</kbd>  /  <kbd>)</kbd>                                | 前移1句  / 后移1句                                           | sentences                                     |
@@ -73,9 +80,9 @@ next: /01-linux/Vim/gmmfg4of/
 | <kbd>gg</kbd>  /  <kbd>G </kbd>                              | 调整至【文档】第一行  /  到最后一行                          | g - game over                                 |
 | ==查找移动==                                                 |                                                              |                                               |
 | <kbd>f</kbd>`{char}`                                         | 光标跳到下一个{char}所在的位置                               |                                               |
-| <kbd>F</kbd>`{char}`                                           | 光标反向跳到上一个{char}所在的位置                           |                                               |
-| <kbd>t</kbd>`{char}`                                           | 光标跳到下个{char}的前一个字符的位置                         |                                               |
-| <kbd>T</kbd>`{char}`                                           | 光标反向移动到上个{char}的后一个字符的位置                   |                                               |
+| <kbd>F</kbd>`{char}`                                         | 光标反向跳到上一个{char}所在的位置                           |                                               |
+| <kbd>t</kbd>`{char}`                                         | 光标跳到下个{char}的前一个字符的位置                         |                                               |
+| <kbd>T</kbd>`{char}`                                         | 光标反向移动到上个{char}的后一个字符的位置                   |                                               |
 | <kbd>;</kbd>                                                 | 重复上次的字符查找命令                                       |                                               |
 | <kbd>,</kbd>                                                 | 反向查找上次的查找命令                                       |                                               |
 | ==其它移动==                                                 |                                                              |                                               |
@@ -102,14 +109,14 @@ next: /01-linux/Vim/gmmfg4of/
 - 参考[vim-easymotion](https://github.com/easymotion/vim-easymotion) 插件
 - 参考[vim-sneak](https://github.com/justinmk/vim-sneak) 插件
 
-| 快捷键                         | 描述                                                         |
-| :----------------------------- | :----------------------------------------------------------- |
-| ==vim-easymotion==             |                                                              |
-| <Leader\>\<Leader\>s           | 开始定位，<br />通过 `map <Leader>s <Plug>(easymotion-prefix) ` 设置前缀 |
-| ==vim-sneak==                  |                                                              |
-| `s{char}{char}`                | Use `s` plus two characters to<br /> search forward in document |
-| `S{char}{char}`                | Use `S` plus two characters to <br />search backward in document |
-| <kbd>;</kbd>  和  <kbd>,</kbd> | Use `;` and `,` just as with `f` and `F` commands<br /> to repeat searches |
+| 快捷键               | 描述                                                         |
+| :------------------- | :----------------------------------------------------------- |
+| ==vim-easymotion==   |                                                              |
+| <Leader\>\<Leader\>s | 开始定位，<br />通过 `map <Leader>s <Plug>(easymotion-prefix) ` 设置前缀 |
+| ==vim-sneak==        |                                                              |
+| `s{char}{char}`      | Use `s` plus two characters to<br /> search forward in document |
+| `S{char}{char}`      | Use `S` plus two characters to <br />search backward in document |
+|                      |                                                              |
 
 #### 2.4 参考图谱
 
@@ -196,8 +203,8 @@ next: /01-linux/Vim/gmmfg4of/
 | :r filename                                 | 在当前位置插入另一个文件的内容                        |                    |
 | :[n]r filename                              | 在第n行插入另一个文件的内容                           |                    |
 | ==插入模式下移动光标==                      |                                                       |                    |
-| ctrl + f                                    | 光标向后移动 ?无用                                    |                    |
-| ctrl + b                                    | 光标向前移动 ?无用                                    |                    |
+|                                             |                                                       |                    |
+|                                             |                                                       |                    |
 | ==进阶操作==                                |                                                       |                    |
 | <kbd>df{char}</kbd>                         | 配合f{char}命令使用，快速删除到指定字符               |                    |
 | <kbd>cf{char}</kbd>                         | 配合f{char}命令使用，快速删除到指定字符并进入编辑模式 |                    |
@@ -289,6 +296,7 @@ next: /01-linux/Vim/gmmfg4of/
 | <kbd>V</kbd> = <kbd>shift + v</kbd> | 【可视化行】- 进入可视模式, 默认选中当前行 |
 | <kbd>d</kbd>                        | 删除选中的字符                             |
 | <kbd>c</kbd>                        | 删除选中的字符，进入编辑模式               |
+| <kbd>o</kbd>                        | 调整选择范围                               |
 | ==可视化块模式==                    |                                            |
 | <kbd>shift + i</kbd>                | 实现批量插入，可视化块选中之后             |
 
@@ -297,7 +305,7 @@ next: /01-linux/Vim/gmmfg4of/
 | 快捷键                              | 描述                             | 意义 |
 | :---------------------------------- | :------------------------------- | ---- |
 | <kbd>v</kbd> + <kbd>e</kbd>         | 快速选中单词,移动至单词开头      |      |
-| <kbd></kbd>                         |                                  |      |
+| <kbd>v%</kbd>                       | 快速选中 函数括号匹配方式        |      |
 | <kbd>vib</kbd>  /  <kbd>vi(</kbd>   | 快速选中 方法的参数区            |      |
 | <kbd>vab</kbd>                      | 快速选中 方法的参数区,包括()括号 |      |
 | <kbd>viw</kbd>  / <kbd>viw</kbd>    | 快速选中 单词                    |      |

@@ -8,7 +8,7 @@ tag:
 author: H·T·L
 date: 2024-09-08
 permalink: /01-linux/Vim/gmmfg4of/
-prev: /01-linux/vim/es3yzyke/
+prev: /01-linux/Vim/es3yzyke/
 next: false
 ---
 
