@@ -19,6 +19,7 @@ field.example[groovy:it.hasAnn("io.swagger.annotations.ApiModelProperty")&&""!=i
 param.required=@com.custom.framework.domain.validator.constraints.hv.NotBlank
 param.required=@com.custom.framework.domain.validator.constraints.jv.NotNull
 param.required=@com.custom.framework.domain.validator.constraints.hv.NotEmpty
+
 field.required=@com.custom.framework.domain.validator.constraints.hv.NotBlank
 field.required=@com.custom.framework.domain.validator.constraints.jv.NotNull
 field.required=@com.custom.framework.domain.validator.constraints.hv.NotEmpty
@@ -32,7 +33,6 @@ field.schema.permit.null=@io.swagger.annotations.ApiModelProperty#required
 # Max+Min
 field.mock[groovy:it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Max")&&it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Min")&&${java_integer_types}.contains(it.jsonType().name())]=groovy:"@integer("+it.ann("com.custom.framework.domain.validator.constraints.jv.Min")+","+it.ann("com.custom.framework.domain.validator.constraints.jv.Max")+")"
 field.mock[groovy:it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Max")&&it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Min")&&${java_float_types}.contains(it.jsonType().name())]=groovy:"@float("+it.ann("com.custom.framework.domain.validator.constraints.jv.Min")+","+it.ann("com.custom.framework.domain.validator.constraints.jv.Max")+",${float_dmin})"
-field.mock[groovy:it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Max")&&it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Min")&&${java_float_types}.contains(it.jsonType().name())]=groovy:"@float(0,27,${float_dmin})"
 
 # Max|Min
 field.mock[groovy:it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Max")&&${java_integer_types}.contains(it.jsonType().name())]=groovy:"@integer(0,"+it.ann("com.custom.framework.domain.validator.constraints.jv.Max")+")"

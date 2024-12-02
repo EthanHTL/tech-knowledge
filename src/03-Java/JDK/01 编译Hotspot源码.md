@@ -31,6 +31,9 @@ sudo yum install mercurial
 # 下载
 hg clone http://hg.openjdk.java.net/aarch64-port/jdk8u
 hg clone https://hg.openjdk.org/jdk/jdk11/
+
+# Mac m1 jdk11源码
+https://github.com/openjdk/jdk11u/tags
 ```
 
 方式二
@@ -50,8 +53,11 @@ cd /Users/aurora/JDK/jdk11u-jdk
 sh ./get_source.sh
 
 sh configure \
+  --with-jvm-variants=server \
   --disable-warnings-as-errors \
-  --with-boot-jdk=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home \
+  --disable-ccache \
+ --with-target-bits=64 \
+  --with-boot-jdk=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home \
   --with-toolchain-path=/Applications/Xcode.app/Contents/Developer/usr/bin
   
 # 其它配置
@@ -103,9 +109,9 @@ make -C ~/USpace/jdk/jdk11u/ images CONF=macosx-aarch64-normal-server-release
 ```bash
 解决：
 
-/Users/aurora/JDK/jdk-jdk-11-28/make/autoconf/platform.m4
-找到 The tested number of bits in the target 所在位置
-修改这两个参数值为64
+1. 文件路径：/Users/aurora/JDK/jdk-jdk-11-28/make/autoconf/platform.m4
+2. 找到 The tested number of bits in the target 所在位置
+3. 修改这两个参数值为64，注意不要有空格
     TESTED_TARGET_CPU_BITS=64
     OPENJDK_TARGET_CPU_BITS=64
 ```
@@ -143,3 +149,4 @@ vi SetupJavaCompilers.gmk
 
 [【2】CodeSheep博客](https://zhuanlan.zhihu.com/p/160776269)
 
+https://www.holelin.cn/2024/01/11/java/%E7%BC%96%E8%AF%91OpenJDK/index.html

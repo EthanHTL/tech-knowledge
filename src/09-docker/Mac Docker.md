@@ -393,6 +393,9 @@ docker run --name sentinel \
 ```bash
 $ docker pull rabbitmq:3.10.5-management
 
+5672 - RabbitMQ server
+15672 - GUI
+
 $ docker run  \
       -p 15672:15672   \ 
       -p 5672:5672  \

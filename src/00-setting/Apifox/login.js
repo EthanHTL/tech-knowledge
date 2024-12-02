@@ -1,78 +1,47 @@
-function generateAccessToken() {
+var appToken = pm.environment.get("APP_TOKEN")
+const appTokenExpires = pm.environment.get("APP_TOKEN_EXPIRES")
 
-    if (!pm.environment.has("ACCESS_TOKEN")) {
-        pm.environment.set("ACCESS_TOKEN", null)
-    }
-    if (!pm.environment.has("ACCESS_TOKEN_EXPIRES")) {
-        pm.environment.set("ACCESS_TOKEN_EXPIRES", null)
-    }
-
-    if (!pm.environment.has("loginURL")) {
-        pm.environment.set("loginURL", 'http://127.0.0.1:8080/login')
-    }
-    pm.test('环境变量 {loginURL:登录地址}配置校验', function () {
-        pm.expect(pm.environment.get("loginURL")).to.not.be.empty;
-    });
-
-    if (!pm.environment.has("activeUser")) {
-        pm.environment.set("activeUser", 'defaultUser')
-    }
-
-    if (!pm.environment.has("defaultUser")) {
-        pm.environment.set("defaultUser", '{"username":"19973504813","password":"123456"}')
-    }
-
-    const loginUserStr = pm.environment.get("activeUser");
-    const loginUser = pm.environment.get(loginUserStr)
-    console.log("登录入参：" + loginUser);
-    pm.test('环境变量 {activeUser:当前登录用户}【' + loginUserStr + '】', function () {
-        pm.expect(loginUser).to.not.be.empty;
-    });
-
-    const loginInfo = '' != loginUser ? loginUser : '{"example": "example"}';
-    const loginURL = '' != pm.environment.get("loginURL") ? pm.environment.get("loginURL") : 'http://127.0.0.1:8080/example';
-
-    const appToken = pm.environment.get("APP_TOKEN") ?? '';
-
-    const echoPostRequest = {
-        url: loginURL,
-        method: "POST",
-        header: {
-            "User-Agent": "	Apifox/1.0.0 (https://apifox.com)",
-            "Accept": "	*/*",
-            "Content-Type": "application/json",
-            "appToken": appToken,
-        },
-        body: {
-            mode: 'raw',
-            raw: loginInfo
-        }
-    };
-    console.log("登录请求：" + JSON.stringify(echoPostRequest));
-
-    pm.sendRequest(echoPostRequest, function (err, res) {
-        if (err) {
-            console.log(err);
-        } else {
-            const ret = res.json();
-            pm.test('登录成功校验', function () {
-                pm.expect(res).to.have.property("code", 200);
-                pm.expect(ret).to.have.any.keys('accessToken');
-            });
-            pm.environment.set("ACCESS_TOKEN", ret.accessToken);
-            // 过期时间 向后偏移2小时
-            let expireTime = new Date();
-            expireTime.setHours(expireTime.getHours() + 2);
-            pm.environment.set("ACCESS_TOKEN_EXPIRES", expireTime);
-            console.log("设置环境变量【accessToken】，值为【" + ret.accessToken + "】")
-        }
-    });
+if (!appToken || (appTokenExpires && new Date(appTokenExpires) <= new Date())) {
+    appToken = generateAppToken()
+    console.log("设置环境变量【appToken】，值为\n" + appToken + "\n")
+    pm.environment.set('APP_TOKEN', appToken)
+    // 过期时间 向后偏移5分钟
+    let expireTime = new Date()
+    expireTime.setMinutes(expireTime.getMinutes() + 5)
+    pm.environment.set("APP_TOKEN_EXPIRES", expireTime)
 }
 
-const accessToken = pm.environment.get("ACCESS_TOKEN");
-const accessTokenExpires = pm.environment.get("ACCESS_TOKEN_EXPIRES");
-
-// 过期处理
+var accessToken = pm.environment.get("ACCESS_TOKEN")
+const accessTokenExpires = pm.environment.get("ACCESS_TOKEN_EXPIRES")
 if (!accessToken || (accessTokenExpires && new Date(accessTokenExpires) <= new Date())) {
-    generateAccessToken();
+    const request = generateLoginRequest(appToken)
+    console.log("登录请求入参：",JSON.parse(request.body.raw))
+    pm.sendRequest(request, function (err, res) {
+        if (err) {
+            console.log(err)
+            return
+        } 
+        const ret = res.json();
+        pm.test('登录成功校验', function () {
+            pm.expect(res).to.have.property("code", 200)
+            pm.expect(res).to.have.property("status", "OK")
+            pm.expect(ret).to.have.any.keys('accessToken')
+        })
+        if ('accessToken' in ret) {
+            pm.environment.set("ACCESS_TOKEN", ret.accessToken)
+            console.log("设置环境变量【accessToken】，值为\n" + ret.accessToken + "\n")
+            // 过期时间 向后偏移2小时
+            let expireTime = new Date()
+            expireTime.setHours(expireTime.getHours() + 2)
+            pm.environment.set("ACCESS_TOKEN_EXPIRES", expireTime)
+            // 更新header
+            pm.request.headers.upsert({ key: "accessToken", value: ret.accessToken })
+        } else {
+            console.log("登录失败", ret);
+            
+        }
+    })
 }
+
+pm.request.headers.upsert({ key: "appToken", value: appToken })
+pm.request.headers.upsert({ key: "accessToken", value: accessToken })

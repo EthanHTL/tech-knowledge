@@ -140,3 +140,17 @@ After IdeaVim reboot you can use this plugin
 
 Install plugin from Intellij Idea Marketplace and add the following option on top of your ./ideavimrc: "set multicursor". After IdeaVim reboot you can use this plugin. Also you can map commands, for example: "map q (multicursor-ms/)"
 
+## ReplaceWithRegister
+
+```bash
+nmap <leader>rs  <Plug>ReplaceWithRegisterOperator
+nmap <leader>rss <Plug>ReplaceWithRegisterLine
+xmap <leader>rs  <Plug>ReplaceWithRegisterVisual
+
+# 用法
+<leader>rs {motion}
+
+```
+
+
+

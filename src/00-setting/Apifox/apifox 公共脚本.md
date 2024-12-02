@@ -25,27 +25,24 @@ order: 1
 
 ::: code-tabs#js
 
-@tab appToken生成
+@tab 初始化脚本
 ```js:line-numbers
-// appToken.js
-<!-- @include: ./appToken.js -->
+// init.js
+// 1. 初始化脚本
+<!-- @include: ./init.js -->
 ```
 
 @tab:active 登录脚本
 ```js:line-numbers
 // login.js
+// 2. 登录脚本
 <!-- @include: ./login.js -->
 ```
 
-@tab Header设置
-```js:line-numbers
-// header.js
-<!-- @include: ./header.js -->
-```
-
-@tab 后置处理脚本
+@tab TOKEN【后置清理】
 ```js:line-numbers
 // process.js
+// TOKEN【后置清理】
 <!-- @include: ./process.js -->
 ```
 

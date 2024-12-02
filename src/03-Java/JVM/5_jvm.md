@@ -86,7 +86,7 @@ Direct Memory
 
 ### 结构总结
 
-<img src="./img/image-20240123145910579.png" alt="image-20240123145910579" style="zoom:50%;" />
+![](./img/image-20240123145910579.png)
 
 
 

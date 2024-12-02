@@ -17,13 +17,13 @@ next: /01-linux/Vim/gmmfg4of/
 
 # Vim 快捷键 - 高效入门
 
-![Vim Cheat Sheet for Programmers](https://images.hicoding.top/i/2024/09/18/2bk0nc-3.webp)
+![Vim Cheat Sheet for Programmers](https://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_screen.png)
 
 <!-- more -->
 
 ## Vim设计理念
 
-> Vim 的核心设计理念是  Action + Range 的模式  -  可以参考这种方式快速记忆命令
+> Vim 的核心设计理念是  Operator + Motion 的模式  -  可以参考这种方式快速记忆命令
 >
 > 例：  `di{` 、`da{` 、`ci"` 、`ca"` 等都是
 
@@ -322,14 +322,17 @@ next: /01-linux/Vim/gmmfg4of/
 >
 > 普通模式下按 <kbd>Q</kbd> 进入Ex模式, 其实就是多行的Command-Line模式
 
-|                        |          |
-| :--------------------- | -------- |
-| <kbd>/</kbd>           | 搜索     |
-| <kbd>:%s/旧/新/g</kbd> | 全局替换 |
-|                        |          |
-| ==分屏==               |          |
-| :split` 或 `:sp        | 垂直拆分 |
-| :vsplit` 或 `:vsp      | 水平拆分 |
+|                        |                          |
+| :--------------------- | :----------------------- |
+| <kbd>:w</kbd>          | Save file<br />w - write |
+| <kbd>:q</kbd>          | q - quit                 |
+| <kbd>:e</kbd>          | e - edit reload          |
+| <kbd>/</kbd>           | 搜索                     |
+| <kbd>:%s/旧/新/g</kbd> | 全局替换                 |
+|                        |                          |
+| ==分屏==               |                          |
+| :split` 或 `:sp        | 垂直拆分                 |
+| :vsplit` 或 `:vsp      | 水平拆分                 |
 
 
 
@@ -396,11 +399,25 @@ vim提供了10类寄存器:
 :actionlis 想找的action
 ```
 
+### q: 和 q/ 和 q？
 
+> 打开历史 命令 或者  查询记录
+
+![q: 命令效果](https://images.hicoding.top/i/2024/09/25/2jckf4-3.webp)
+
+![q/ 命令效果](https://images.hicoding.top/i/2024/09/25/2jsak1-3.webp)
+
+![q? 命令效果](https://images.hicoding.top/i/2024/09/25/2k0866-3.webp)
 
 ## 参考文章
 
-[vimawesome.com](https://vimawesome.com/plugin/fugitive-vim)
+[1. vimawesome.com](https://vimawesome.com/plugin/fugitive-vim)
+
+[2. vim命令速查表](https://github.com/chloneda/vim-cheatsheet?tab=readme-ov-file#%E7%BC%93%E5%86%B2%E5%8C%BA)
+
+[3. vim速查 devhints.io](https://devhints.io/vim)
+
+[4. Vim Cheat Sheet for Programmers](https://michael.peopleofhonoronly.com/vim/)
 
 
 

@@ -29,8 +29,14 @@ permalink: /03-Java/Groovy/db9apk8j/
             <executions>
                 <execution>
                     <goals>
-                        <goal>compile</goal>
-                        <goal>compileTests</goal>
+              		<goal>addSources</goal>
+              		<goal>addTestSources</goal>
+              		<goal>generateStubs</goal>
+              		<goal>compile</goal>
+          		    <goal>generateTestStubs</goal>
+          		    <goal>compileTests</goal>
+         			  <goal>removeStubs</goal>
+        		      <goal>removeTestStubs</goal>
                     </goals>
                 </execution>
             </executions>
