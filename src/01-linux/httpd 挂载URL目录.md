@@ -10,6 +10,12 @@ permalink: /01-linux/yx7jcgjh/
 
 # 使用Apache将目录挂载为可浏览的URL
 
+## 效果
+
+![httpd](https://images.hicoding.top/i/2024/09/04/jwzn0s-3.webp)
+
+<!-- more -->
+
 ## 安装Apache
 
 通常CentOS系统已经自带Apache
@@ -62,9 +68,7 @@ Alias /icons/ "/var/www/icons/"
 
 
 
-## 效果
 
-![httpd](https://images.hicoding.top/i/2024/09/04/jwzn0s-3.webp)
 
 
 

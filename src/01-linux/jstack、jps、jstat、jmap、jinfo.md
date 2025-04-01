@@ -11,7 +11,7 @@ permalink: /01-linux/wulcrabq/
 
 # jstack
 
-```sh
+```turtle
  Usage:
      jstack [-l] <pid>
          (to connect to running process)

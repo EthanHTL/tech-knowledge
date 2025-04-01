@@ -3,7 +3,7 @@ title: Markdown
 icon: signs-post
 article: false
 index: false
-author: H T L L
+author: H T L
 date: 2024-06-09
 permalink: /cookbook/
 ---

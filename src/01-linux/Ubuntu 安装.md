@@ -37,7 +37,24 @@ server版：https://ubuntu.com/download/server/arm
 ### 修改hostname
 
 ```sh
-sudo gedit /etc/hostname
+// 方法一 修改文件
+$ sudo gedit /etc/hostname
+
+// 方法二 命令方式
+$ hostnamectl set-hostname 新的hostname
+
+$ hostnamectl 
+ Static hostname: srv
+ Icon name: computer-vm
+ Chassis: vm
+ Machine ID: 99cd64b1517b4b638a72cb7cb8c529c4
+ Boot ID: fa60210b05ca4371a1a0d54907ccdb88
+ Virtualization: parallels
+ Operating System: Ubuntu 22.04.5 LTS
+ Kernel: Linux 5.15.0-125-generic
+ Architecture: arm64
+ Hardware Vendor: Parallels International GmbH.
+ Hardware Model: Parallels ARM Virtual Machine
 ```
 
 
@@ -80,6 +97,27 @@ https://blog.csdn.net/qq_44571245/article/details/123031276
 
 
 
+### 安装所需的桌面环境。
+
+例如，要安装Gnome桌面环境，请运行：
+
+sudo apt-get install ubuntu-desktop
+
+如果您希望安装一个轻量级的桌面环境，如XFCE，可以运行：
+
+sudo apt-get install xubuntu-desktop
+
+对于KDE桌面环境，则运行：
+
+sudo apt-get install kubuntu-desktop
+
+4安装完成后，您可以通过执行以下命令进入图形界面：
+
+startx
+
+也可以重新启动系统以使更改生效：
+
+   sudo reboot
 
 
 ## jdk多版本版本

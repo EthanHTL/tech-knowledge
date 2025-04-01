@@ -4,6 +4,7 @@
 #max.deep=10
 #max.elements=512
 
+
 ###set resolveMulti = first
 # define var
 number_min=-9999
@@ -12,13 +13,16 @@ float_dmin=2
 java_integer_types=["java.lang.Integer","int","java.lang.Long","long","java.lang.Short","short","java.math.BigInteger"]
 java_float_types=["java.lang.String","java.lang.Float","float","java.lang.Double","double","java.math.BigDecimal"]
 
-# example
-field.example[groovy:it.hasAnn("io.swagger.annotations.ApiModelProperty")&&""!=it.ann("io.swagger.annotations.ApiModelProperty","example")]=groovy:it.ann("io.swagger.annotations.ApiModelProperty","example")
 
 # rules for com.custom.framework.domain.validator.constraints
 param.required=@com.custom.framework.domain.validator.constraints.hv.NotBlank
 param.required=@com.custom.framework.domain.validator.constraints.jv.NotNull
 param.required=@com.custom.framework.domain.validator.constraints.hv.NotEmpty
+
+
+# field example
+field.example[groovy:it.hasAnn("io.swagger.annotations.ApiModelProperty")&&""!=it.ann("io.swagger.annotations.ApiModelProperty","example")]=groovy:it.ann("io.swagger.annotations.ApiModelProperty","example")
+
 
 field.required=@com.custom.framework.domain.validator.constraints.hv.NotBlank
 field.required=@com.custom.framework.domain.validator.constraints.jv.NotNull
@@ -29,6 +33,7 @@ field.schema.permit.null=@com.custom.framework.domain.validator.constraints.jv.N
 field.schema.permit.null=@com.custom.framework.domain.validator.constraints.hv.NotEmpty
 field.schema.permit.null=@io.swagger.annotations.ApiImplicitParam#required
 field.schema.permit.null=@io.swagger.annotations.ApiModelProperty#required
+
 
 # Max+Min
 field.mock[groovy:it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Max")&&it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Min")&&${java_integer_types}.contains(it.jsonType().name())]=groovy:"@integer("+it.ann("com.custom.framework.domain.validator.constraints.jv.Min")+","+it.ann("com.custom.framework.domain.validator.constraints.jv.Max")+")"
@@ -47,6 +52,7 @@ field.advanced[@com.custom.framework.domain.validator.constraints.jv.Min]=groovy
 field.advanced[@com.custom.framework.domain.validator.constraints.jv.Max]=groovy:```
     return [minimum:it.ann("com.custom.framework.domain.validator.constraints.jv.Max")]
 ```
+
 
 # Size
 field.mock[groovy:it.hasAnn("com.custom.framework.domain.validator.constraints.jv.Size")&&it.jsonType().name()=="java.lang.String"]=groovy:```
@@ -79,7 +85,6 @@ field.advanced[@com.custom.framework.domain.validator.constraints.hv.NotEmpty]=g
     advanced["min"+element] = 1
     return advanced
 ```
-
 
 # 枚举
 enum.use.custom[groovy:it.isExtend("com.ktna.cloud.base.core.constant.EnumProcessor")]=code

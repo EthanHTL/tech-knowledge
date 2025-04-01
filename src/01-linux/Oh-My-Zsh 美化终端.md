@@ -2,10 +2,13 @@
 title: Oh-My-Zsh 美化终端
 date: 2024-07-02
 permalink: /linux/oxhbxq3r/
-category: []
-tag: []
+category:
+  - 设置
+tags:
+  - 插件
 author: H T L
 order: 1
+tag: []
 ---
 # Oh-My-Zsh 美化终端
 
@@ -32,9 +35,9 @@ order: 1
 
 ```bash
 #安装
-sudo apt install zsh
+$ sudo apt install zsh
 #版本
-zsh --version
+$ zsh --version
 
 echo $SHELL #当前shell
 cat   /etc/shells # 所有shell
@@ -175,7 +178,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 #### sudo
 
-sudo 的主要作用是，当我们输入某个命令，如 vim /etc/zshrc，发现没有系统权限，利用 sudo 插件，可快速将 sudo 作为前缀添加到命令最前面。
+sudo 的主要作用是，当我们输入某个命令，如 vim /etc/zshrc，发现没有系统权限，利用 sudo 插件，双击<kbd>ESC</kbd>可快速将 sudo 作为前缀添加到命令最前面。
 
 ![img](https://images.hicoding.top/i/2024/09/04/12sueur-3.gif)
 

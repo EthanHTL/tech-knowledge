@@ -4,12 +4,13 @@ order: 1
 category:
   - Java
   - Spring
-tag:
+tags:
   - Java
   - Spring
 author: H·T·L
 date: 2024-08-01
 permalink: /04-spring/spring/2ytowm9b/
+tag: []
 ---
 [gradle下载仓库]( https://services.gradle.org/distributions/)
 

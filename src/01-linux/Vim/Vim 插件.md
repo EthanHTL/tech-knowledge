@@ -29,7 +29,7 @@ let mapleader=","
 set easymotion
 ```
 
-
+。
 
 ## NERDTree 
 

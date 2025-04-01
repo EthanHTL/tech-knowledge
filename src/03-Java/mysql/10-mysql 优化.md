@@ -10,6 +10,16 @@ permalink: /03-Java/MySQL/4iyh2lyb/
 ---
 
 
+
+```
+show privileges;
+show processlist;
+select @@innodb_fast_shutdown;
+select @@version;
+```
+
+
+
 # 打印表结构
 
 ```sql

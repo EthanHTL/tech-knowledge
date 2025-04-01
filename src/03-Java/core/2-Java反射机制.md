@@ -21,7 +21,7 @@ JAVA反射机制是在运行状态中，对于任意一个类，都能够知道�
 把个个组成部分映射成一个个对象。  
 <img src="http://images.hicoding.top/i/2024/07/29/kq4qd1-2.webp" width="100%">
 
-1. ##### 正射和反射
+1.  正射和反射
 
 ```java
 public class Apple {

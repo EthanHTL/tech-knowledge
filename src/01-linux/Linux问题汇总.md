@@ -9,6 +9,35 @@ permalink: /01-linux/2kpx6e3p/
 ---
 # Linux 问题汇总
 
+
+
+## TTY
+
+> - Linux 默认有6个终端，tt1~tty6，可通过快捷键<kbd>Ctrl</kbd> + <kbd>Opt</kbd> + <kbd>F1 ~ F6</kbd> 进行切换
+>
+> - 若为远程登录则使用动态终端接口 (pts/n)
+>
+> 
+>
+> **终端分类：**
+>
+> - tty* ：代表当前终端设备。无论你当前使用的是哪种终端（物理控制台、虚拟控制台、伪终端等）
+> - ttys* ：代表串行端口终端（Serial Port Terminal）。计算机把每个串行端口都看作是一个字符设备。这些串行端口所对应的设备名称是`/dev/tts/0`（或`/dev/ttyS0`）、`/dev/tts/1`（或`/dev /ttyS1`）等
+> - pts* ：代表伪终端从设备。这些设备文件用于通过终端模拟器或远程登录（如 `ssh`）连接的终端
+
+```bash
+# 相关命令
+$ w
+
+$ who
+
+$ whoami
+
+$ tty
+```
+
+
+
 ## 修改root账户密码
 
 ```bash

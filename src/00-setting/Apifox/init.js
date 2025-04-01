@@ -62,7 +62,7 @@ generateLoginRequest = function (token) {
 
     const loginURL = pm.environment.get("loginURL")
 
-    const appToken = pm.environment.get("APP_TOKEN") ?? token ?? generateAppToken();
+    const appToken = token ?? pm.environment.get("APP_TOKEN") ??  generateAppToken();
 
     pm.test('环境变量 {loginURL:登录地址} 检查', function () {
         pm.expect(loginURL).to.not.be.empty;
