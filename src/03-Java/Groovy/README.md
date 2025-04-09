@@ -1,8 +1,8 @@
 ---
 title: Groovy
 order: 1
-category: []
-tag: []
+category: null
+tags: null
 author: H·T·L
 date: 2024-08-27
 article: false

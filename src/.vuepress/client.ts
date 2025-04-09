@@ -16,11 +16,11 @@ export default defineClientConfig({
   // 自定义页面布局，配合[formatter] layout: AutoArticleListLayout 使用
   // 参考：https://www.zhaobc.site/posts/theme/auto-articles.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80
   layouts: {
-    AutoArticleListLayout,
+    // AutoArticleListLayout,
   },
 
   enhance: ({ app, router, siteData }) => {
-    app.component('AutoArticleList', AutoArticleList)
+    // app.component('AutoArticleList', AutoArticleList)
   },
 
   setup() {

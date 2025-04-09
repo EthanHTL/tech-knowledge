@@ -35,4 +35,8 @@ export default [   // export default [  ==  export const plugins: PluginConfig =
         triggerLength: 5,
         authorGetter: (page: Page) => page.frontmatter.author || 'Unknown'
     }),
+    {
+        'internal-link': {}
+    }
+
 ]

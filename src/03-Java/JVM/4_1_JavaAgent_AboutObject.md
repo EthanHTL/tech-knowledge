@@ -1,11 +1,12 @@
 ---
 title: JavaAgent_AboutObject
 order: 4
-category: 
-tags: 
+category: []
+tags: null
 author: H·T·L
 date: 2024-05-05
 permalink: /03-Java/JVM/z6nipowe/
+tag: []
 ---
 # 使用JavaAgent测试Object的大小
 

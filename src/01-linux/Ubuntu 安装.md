@@ -22,9 +22,12 @@ server版：https://ubuntu.com/download/server/arm
 [安装教程 blog01](https://zhuanlan.zhihu.com/p/360887952)
 
 [[单元测试]]
-[[top命令]]
+
+[[top命令.md]]
+
 [[单元测试]]
-[top命令111](top命令.md)
+
+[top命令](top命令.md#^说明)
 
 ### 注册页面
 
@@ -146,3 +149,4 @@ sudo systemctl restart docker   #重启Docker守护进程
 sudo systemctl enable docker    #设置Docker开机自启动
 sudo systemctl status docker    #查看Docker的运行状态
 ```
+

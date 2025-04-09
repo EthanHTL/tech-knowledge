@@ -1,12 +1,13 @@
 ---
 title: Fork项目同步原始仓库代码
-author: H·T·L
 date: 2024-07-22
 order: 2
 category:
   - git
-tag: []
+tags: null
+author: H·T·L
 permalink: /01-linux/Git/va1f0ik8/
+tag: []
 ---
 
 ## 对Fork的项目进行更新
