@@ -1,8 +1,8 @@
 ---
-title: 4_1_JavaAgent_AboutObject
+title: JavaAgent_AboutObject
 order: 4
-category: []
-tag: []
+category: 
+tags: 
 author: H·T·L
 date: 2024-05-05
 permalink: /03-Java/JVM/z6nipowe/

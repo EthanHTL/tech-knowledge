@@ -1,11 +1,12 @@
 ---
 title: Ubuntu
 date: 2024-07-07
-permalink: /01-linux/9web2dks/
 category: []
-tag: []
+tags: null
 author: H T L
 order: 1
+permalink: /01-linux/9web2dks/
+tag: []
 ---
 
 
@@ -20,7 +21,10 @@ server版：https://ubuntu.com/download/server/arm
 
 [安装教程 blog01](https://zhuanlan.zhihu.com/p/360887952)
 
-
+[[单元测试]]
+[[top命令]]
+[[单元测试]]
+[top命令111](top命令.md)
 
 ### 注册页面
 

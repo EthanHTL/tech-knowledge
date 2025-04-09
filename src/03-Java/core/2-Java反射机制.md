@@ -53,12 +53,12 @@ public class Apple {
 }
 ```
 
-2. ##### 结果
+2.  结果
 
 >Apple Price:5
 >Apple Price:14
 
-3. ###### 反射步骤
+3.  反射步骤
 
 	+ 获取类的 Class 对象实例
 	```java
